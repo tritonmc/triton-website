@@ -1,0 +1,18 @@
+:local(.splash) {
+  height: 100vh;
+  text-align: center;
+  background: url(../../../img/background.jpg) no-repeat fixed center center;
+  padding-top: 100px;
+  color: white;
+  :global(.mdc-typography--headline1),
+  :global(.mdc-typography--headline4) {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+:local(.callToAction) {
+  margin-top: 50px;
+  :global(.mdc-button:not(:first-child)) {
+    margin-left: 10px;
+  }
+}
