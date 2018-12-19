@@ -7,6 +7,7 @@ import { List, ListItem, ListItemGraphic, ListDivider } from "@rmwc/list";
 import { setDrawerState } from "../../../actions/navigationActions";
 import commentQuestionIcon from "../../../img/icons/comment-question.svg";
 import fileDocumentIcon from "../../../img/icons/file-document.svg";
+import NavigationItem from "./NavigationItem/NavigationItem";
 
 class NavigationDrawer extends Component {
   render() {
@@ -18,22 +19,21 @@ class NavigationDrawer extends Component {
         </DrawerHeader>
         <DrawerContent>
           <List>
-            <ListItem>
-              <ListItemGraphic icon="home" />
+            <NavigationItem icon="home" selector="#top">
               Home
-            </ListItem>
-            <ListItem>
-              <ListItemGraphic icon="where_to_vote" />
+            </NavigationItem>
+            <NavigationItem icon="where_to_vote" selector="#about">
               Why Triton?
-            </ListItem>
-            <ListItem>
-              <ListItemGraphic icon="star" />
+            </NavigationItem>
+            <NavigationItem icon="star" selector="#features">
               Features
-            </ListItem>
-            <ListItem>
-              <ListItemGraphic icon={commentQuestionIcon} />
+            </NavigationItem>
+            <NavigationItem icon={commentQuestionIcon} selector="#faq">
               FAQ
-            </ListItem>
+            </NavigationItem>
+            <NavigationItem icon="help" selector="#support">
+              Get Support
+            </NavigationItem>
             <ListDivider />
             <ListItem>
               <ListItemGraphic icon={fileDocumentIcon} />

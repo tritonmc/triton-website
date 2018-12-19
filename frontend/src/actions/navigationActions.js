@@ -10,3 +10,10 @@ export const setDrawerState = (state) => (dispatch) => {
     state,
   });
 };
+
+export const setActiveSection = (section) => (dispatch) => {
+  dispatch({
+    type: "SET_ACTIVE_SECTION",
+    section,
+  });
+};

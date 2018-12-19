@@ -14,7 +14,7 @@ import { toggleDrawer } from "../../../actions/navigationActions";
 class Header extends Component {
   render() {
     return (
-      <TopAppBar short>
+      <TopAppBar short className={styles.navbar}>
         <TopAppBarRow>
           <TopAppBarSection>
             <TopAppBarNavigationIcon icon="menu" onClick={this.props.toggleDrawer} />

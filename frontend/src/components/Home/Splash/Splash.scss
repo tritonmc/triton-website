@@ -1,8 +1,8 @@
 :local(.splash) {
-  height: 100vh;
+  height: 50vh;
   text-align: center;
   background: url(../../../img/background.jpg) no-repeat fixed center center;
-  padding-top: 100px;
+  padding-top: 150px;
   color: white;
   :global(.mdc-typography--headline1),
   :global(.mdc-typography--headline4) {

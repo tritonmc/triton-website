@@ -1,0 +1,15 @@
+:local(.question) {
+  height: 100%;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+:local(.headerDiv) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .rmwc-icon {
+    padding-right: 10px;
+  }
+}

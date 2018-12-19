@@ -829,13 +829,18 @@
     "@material/typography" "^0.41.0"
     focus-trap "^3.0.0"
 
-"@material/elevation@^0.41.0":
+"@material/elevation@^0.41.0", "@material/elevation@~0.41.0":
   version "0.41.0"
   resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.41.0.tgz#db6b75ea43354fe35936cba2d78c55390faf4e9e"
   integrity sha512-ZtZS8z5ie9c7Cx5PVudgSorGYa0C3lu3dA+Nn6qJdhGUokl01msh54NfNuwk+EZsk65bNRRqw1Td/63TCbKIzg==
   dependencies:
     "@material/animation" "^0.41.0"
     "@material/theme" "^0.41.0"
+
+"@material/layout-grid@~0.39.0":
+  version "0.39.0"
+  resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-0.39.0.tgz#8e96645404cfee2655999bc591264c434897af3d"
+  integrity sha512-F2V7cf7pJtlDyHKJJ1u7Xn6JWfiY7bFbg33QnhRXYTAhDF5aEcFPeSh9CK8ZZZ4Bom9gzfms2VXWXClbfQgE2Q==
 
 "@material/list@^0.41.0", "@material/list@~0.41.0":
   version "0.41.0"
@@ -938,6 +943,22 @@
   integrity sha512-uvSOeAmlgl4e+DYn0ksrFUL8RECtVbzMmhQcC2vdZfuKPSkOKiUL09m2fnlQO/bXnJWKiu52dTOh09I/S4TDIA==
   dependencies:
     "@material/drawer" "~0.41.0"
+    "@rmwc/base" "^4.0.1"
+
+"@rmwc/elevation@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@rmwc/elevation/-/elevation-4.0.1.tgz#5e3c52aea1ca57440d19d9fe4fbad6be2046c3d7"
+  integrity sha512-o7o9/oajoDeA6w3uR8ZLYNIaSUALlDeWxKscnMO3UVTQ5u66OO/9TS/UbOE9TtZZ392fJpKGy2gOtx4z22ZmtQ==
+  dependencies:
+    "@material/elevation" "~0.41.0"
+    "@rmwc/base" "^4.0.1"
+
+"@rmwc/grid@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@rmwc/grid/-/grid-4.0.1.tgz#c961d14cc5b30784113a3a401689374c32510364"
+  integrity sha512-76vVG4yQaJRTPdxk3HSvatcBjAROTgvaz/CB5zLjL9yZU2RqWzJLXj6JhftQtOuI+AkaWP7GdMw1RCKa1DUg6Q==
+  dependencies:
+    "@material/layout-grid" "~0.39.0"
     "@rmwc/base" "^4.0.1"
 
 "@rmwc/icon@^4.0.1":
@@ -8265,6 +8286,11 @@ react-scripts@2.1.1:
     workbox-webpack-plugin "3.6.3"
   optionalDependencies:
     fsevents "1.2.4"
+
+react-scroll-into-view@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/react-scroll-into-view/-/react-scroll-into-view-1.5.0.tgz#c77937f6f9eae8b307d55d7bab98afecf2206246"
+  integrity sha512-q911hjgM9gndHyCFzf1zrZkXu8POmz/N5EP5yGhCIyVYkJJDfsX7e3UmkM4SGIJw9UMWnk+5Q43YpSItUaC7Ag==
 
 react-test-renderer@^16.6.3:
   version "16.6.3"

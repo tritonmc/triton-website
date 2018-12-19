@@ -1,0 +1,9 @@
+:local(.container) {
+  margin: auto;
+  max-width: 70%;
+  padding: 30px 10px 0px 10px;
+
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+  }
+}

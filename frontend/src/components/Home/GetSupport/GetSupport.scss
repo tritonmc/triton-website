@@ -1,0 +1,14 @@
+:local(.responsiveWrapper) {
+  position: relative;
+  overflow: hidden;
+  padding-top: 550px;
+}
+
+:local(.responsiveWidget) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
