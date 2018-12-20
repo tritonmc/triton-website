@@ -8,6 +8,7 @@ import { setDrawerState } from "../../../actions/navigationActions";
 import commentQuestionIcon from "../../../img/icons/comment-question.svg";
 import fileDocumentIcon from "../../../img/icons/file-document.svg";
 import NavigationItem from "./NavigationItem/NavigationItem";
+import { Link } from "react-router-dom";
 
 class NavigationDrawer extends Component {
   render() {
@@ -35,10 +36,12 @@ class NavigationDrawer extends Component {
               Get Support
             </NavigationItem>
             <ListDivider />
-            <ListItem>
-              <ListItemGraphic icon={fileDocumentIcon} />
-              Documentation
-            </ListItem>
+            <Link to="/docs" onClick={this.props.closeDrawer}>
+              <ListItem>
+                <ListItemGraphic icon={fileDocumentIcon} />
+                Documentation
+              </ListItem>
+            </Link>
             <ListItem>
               <ListItemGraphic icon="developer_board" />
               API for Developers

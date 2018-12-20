@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 //import styles from "./Home.scss";
+import NavigationDrawer from "./NavigationDrawer/NavigationDrawer";
 import Splash from "./Splash/Splash";
 import WhyTriton from "./WhyTriton/WhyTriton";
 import Features from "./Features/Features";
@@ -10,6 +11,7 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
+        <NavigationDrawer />
         <Splash />
         <WhyTriton />
         <Features />
