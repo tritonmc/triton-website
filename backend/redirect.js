@@ -1,7 +1,9 @@
 // Setup redirects here
 const redirectMap = {
   "/discord": "https://discord.gg/9FsawxR",
+  "/github": "https://github.com/Rexcantor/MultiLanguagePlugin/",
   "/github_issues": "https://github.com/Rexcantor/MultiLanguagePlugin/issues",
+  "/spigot": "https://www.spigotmc.org/resources/triton.30331/",
 };
 
 module.exports = (req, res, next) => {

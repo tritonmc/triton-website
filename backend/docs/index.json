@@ -1,0 +1,10 @@
+{
+  "pages": [
+    { "name": "Get Started", "page": "get-started" },
+    { "name": "Migrating from v0", "page": "migrating-from-v0" },
+    { "name": "Installation", "page": "installation" },
+    { "name": "Placeholders", "page": "placeholders" },
+    { "name": "Commands and Permissions", "page": "commands" }
+  ],
+  "default": "get-started"
+}
