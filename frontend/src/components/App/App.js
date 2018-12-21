@@ -14,7 +14,7 @@ class App extends Component {
         <ThemeProvider
           options={{
             primary: "#008ff8",
-            secondary: "#ffa000",
+            secondary: "#d84315",
           }}>
           <Header />
           <Switch>

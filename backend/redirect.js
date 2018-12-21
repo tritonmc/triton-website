@@ -8,5 +8,5 @@ const redirectMap = {
 
 module.exports = (req, res, next) => {
   if (redirectMap[req.path]) res.redirect(redirectMap[req.path]);
-  next();
+  else next();
 };
