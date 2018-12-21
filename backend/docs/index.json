@@ -4,7 +4,8 @@
     { "name": "Migrating from v0", "page": "migrating-from-v0" },
     { "name": "Installation", "page": "installation" },
     { "name": "Placeholders", "page": "placeholders" },
-    { "name": "Commands and Permissions", "page": "commands" }
+    { "name": "Commands and Permissions", "page": "commands" },
+    { "name": "TWIN", "page": "twin" }
   ],
   "default": "get-started"
 }
