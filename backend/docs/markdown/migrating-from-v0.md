@@ -37,6 +37,21 @@ Migrating the config file should be easy. You can find the latest version of the
 If you're using BungeeCord, you don't need to configure the `languages` section in the Spigot servers and please enable `bungeecord: true`.  
 Simply do a side-by-side comparison on your old config to know what you should change.
 
+## Migrating the API
+
+If you were using the API, you'll be happy to know that v1 has backwards compatibility.  
+That means you'll probably not need to do anything!
+
+However, some features of the API were removed since they've been changed in v1. If you use any of the following methods/classes, please switch to the new API:
+
+- `Lang#getMeta()`
+- `Lang#getStack()`
+- `Lang#getMap()`
+- `Banner` (the entire class)
+- `BungeeMLP#reloadConfigValues()`
+
+You can get started with the API in our [GitHub](/api).
+
 ## After Migrating
 
 Congratulations! You've made it!
