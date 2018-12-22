@@ -16,8 +16,40 @@
     padding: 0.2em 0.4em;
     color: var(--mdc-theme-secondary);
   }
+  pre {
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    font-size: 85%;
+    line-height: 1.45;
+    overflow: auto;
+    padding: 16px;
+    word-wrap: normal;
+    code {
+      background-color: initial;
+      border: 0;
+      display: inline;
+      line-height: inherit;
+      margin: 0;
+      max-width: auto;
+      overflow: visible;
+      padding: 0;
+      word-wrap: normal;
+    }
+  }
   hr {
     border: none;
     border-top: 1px solid #eaecef;
+  }
+  img {
+    width: 100%;
+  }
+  div {
+    &.warning {
+      background-color: #ffc107;
+      color: #343a40;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #af8d0ec9;
+    }
   }
 }

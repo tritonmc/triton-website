@@ -56,7 +56,11 @@ class DocumentationPage extends Component {
     return (
       <div className={styles.container}>
         <Container>
-          <ReactMarkdown className={styles.markdown} source={this.state.content} />
+          <ReactMarkdown
+            className={styles.markdown}
+            source={this.state.content}
+            escapeHtml={false}
+          />
         </Container>
       </div>
     );

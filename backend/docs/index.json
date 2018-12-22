@@ -2,10 +2,11 @@
   "pages": [
     { "name": "Get Started", "page": "get-started" },
     { "name": "Migrating from v0", "page": "migrating-from-v0" },
-    { "name": "Installation", "page": "installation" },
+    { "name": "Installation and Configuration", "page": "installation" },
     { "name": "Placeholders", "page": "placeholders" },
     { "name": "Commands and Permissions", "page": "commands" },
-    { "name": "TWIN", "page": "twin" }
+    { "name": "TWIN", "page": "twin" },
+    { "name": "Flags", "page": "flags" }
   ],
   "default": "get-started"
 }
