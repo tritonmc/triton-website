@@ -20,9 +20,18 @@ A new folder called `Triton` will be created and all your language files have be
 
 If you're **NOT** using BungeeCord (or a fork) this is all you need to do.
 
-#### Using BungeeCord
+### Using BungeeCord
 
-If you're using BungeeCord, the process requires a bit of manual work.
+If you're using BungeeCord, the process requires a bit of manual work.  
+There are two options:
+
+#### Using TWIN (Triton Web Interface)
+
+1. Visit [TWIN's Migration page](https://twin.rexcantor64.com/migrate).
+2. Page every Spigot server's `languages.json` file along with the server name **as it is on your BungeeCord config**.
+3. Click `GET RESULT` and paste the contents in your BungeeCord's Triton `languages.json` file.
+
+#### Manually
 
 1. Install the plugin on BungeeCord and let it create the `Triton` folder.
 2. Open the generated `languages.json` file and put the merged contents of all the `languages.json` files from the other servers.
@@ -49,6 +58,8 @@ However, some features of the API were removed since they've been changed in v1.
 - `Lang#getMap()`
 - `Banner` (the entire class)
 - `BungeeMLP#reloadConfigValues()`
+
+Using these in Triton v1 will throw an error on console.
 
 You can get started with the API in our [GitHub](/api).
 
