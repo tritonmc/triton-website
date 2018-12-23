@@ -15,10 +15,14 @@ app.use(
   express.static(path.join(__dirname, "docs", "markdown"), { extensions: ["md"] })
 );
 
+app.get("/documentation/page/*", (_req, res) => res.sendStatus(404));
+
 app.use(
   "/documentation/images",
   express.static(path.join(__dirname, "docs", "img"), { extensions: ["png", "jpg"] })
 );
+
+app.get("/documentation/images/*", (_req, res) => res.sendStatus(404));
 
 app.use("/javadocs", express.static(path.join(__dirname, "javadoc")));
 

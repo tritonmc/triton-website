@@ -108,3 +108,8 @@ This will be the default language of a player when they join the server for the 
 
 If you're using BungeeCord, you only need to place your TWIN token in the BungeeCord Triton's config.  
 To learn more about TWIN and how you can get the token, visit the [TWIN documentation page](/docs/twin).
+
+## Using BungeeCord
+
+To use BungeeCord (or a fork), you must enable `bungeecord` on config. Furthermore, make sure all your servers (including BungeeCord) are using the same version of the plugin, otherwise some unexpected problems may show up.  
+While using BungeeCord, your `languages.json` file is ignore in all servers except the proxy. The `languages` section on config is also ignored.
