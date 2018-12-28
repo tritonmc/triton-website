@@ -12,6 +12,7 @@ Before proceeding, please take a look at what changed in Triton v1:
 - The `languages` folder has been replaced by a single file: `languages.json`. This is probably the biggest change in the configuration and might require some tweaking, especially if you're using BungeeCord (or a fork).
 - The config file (`config.yml`) has been modified and thus requires reconfiguration.
 - SQL support has been removed since it's no longer needed. Your player's language perferences will reset if you were using SQL.
+- [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) is now a dependency. You must install it on all your Spigot servers. Make sure you have the latest version.
 
 ## Migrating the language files
 

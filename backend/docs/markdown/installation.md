@@ -2,12 +2,13 @@
 
 The process of installing the plugin is fairly simple:
 
-1. Download the latest version from [Spigot](/spigot).
-2. Place the `.jar` in your plugins folder.
-3. Start the server so it generates the default configuration.
-4. Stop the server.
-5. Configure the plugin accordingly.
-6. Start the server.
+1. Download and install [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/).
+2. Download the latest version from [Spigot](/spigot).
+3. Place the `.jar` in your plugins folder.
+4. Start the server so it generates the default configuration.
+5. Stop the server.
+6. Configure the plugin accordingly.
+7. Start the server.
 
 ## Configuring the plugin
 
