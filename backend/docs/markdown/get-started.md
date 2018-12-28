@@ -4,7 +4,8 @@ If you're coming from Triton v0 (known as _MultiLanguagePlugin_), please refer t
 
 ---
 
-Welcome to Triton's documentation! To get started as soon as possible and avoid any errors, please read this documentation before configuring the plugin.
+Welcome to Triton's documentation! To get started as soon as possible and avoid any errors, please read this documentation before configuring the plugin.  
+Choose a topic from the navigation drawer on the left or in the links below.
 
 ### Useful links
 
