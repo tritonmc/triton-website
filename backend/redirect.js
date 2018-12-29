@@ -8,6 +8,7 @@ const redirectMap = {
     "https://github.com/Rexcantor/MultiLanguagePlugin/blob/master/bungee_config.yml",
   "/api": "https://github.com/Rexcantor/MultiLanguagePlugin/wiki",
   "/spigot": "https://www.spigotmc.org/resources/triton.30331/",
+  "/api-latest": "https://cdn.rexcantor64.com/triton/api/TritonAPI-v1.0.0.jar",
 };
 
 module.exports = (req, res, next) => {
