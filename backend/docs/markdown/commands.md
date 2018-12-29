@@ -62,7 +62,7 @@ Sets the language of self or another player.
 #### Arguments
 
 `player` _(optional)_: Specify the target player. Requires the `triton.setlanguage.others` permission.  
-`language`: The Language ID of the language to set the target's language to.
+`language`: The ID of the target language.
 
 ### /triton sign &lt;mode&gt; &#91;group id&#93;
 
