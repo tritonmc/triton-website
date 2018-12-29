@@ -5,6 +5,19 @@ If you think some flag is missing, please contact me.
 
 ## Flag List
 
+- Belgium: `laaEbf`
+- Brazil: `calvlvlvetet`
 - Canada: `pabjbwpipsbtbEbf`
+- China: `balbbBbcbe`
+- Croatia: `pabyptmoesplptbt`
+- Czech Republic: `pabMpHegeg`
+- Finland: `eapbpdpqelel`
+- France: `paeEbf`
+- Germany: `baayls`
+- India: `paetetcscsoyoy`
+- Italy: `pacEbf` (dark green) | `pakEbf` (light green)
 - Portugal: `bacLlt`
+- Spain: `padqlElLbybs`
+- Switzerland: `bapwplbcbEbf`
 - United Kingdom: `eapwplpnpmbzbj`
+- United States of America (USA): `bapBeC`
