@@ -15,7 +15,7 @@ The process of installing the plugin is fairly simple:
 The default config files can be found on GitHub: [Spigot side config](/github_config) | [BungeeCord side config](/github_config_bungee)
 
 The config has comments all over the place, so it should be fairly simple to understand.  
-Nonetheless, here is a brief explanation of how to configure the main features of the plugin:
+Nonetheless, here is a brief explanation on how to configure the main features of the plugin:
 
 ### Adding/Removing languages
 
@@ -42,17 +42,17 @@ In this example, `pt` represents the Language ID (LID for short). This LID is us
 
 #### flag
 
-The flag parameter is probably the most difficult one to understand. For that reason, here are step-by-step instructions of how to do it:
+The flag parameter is probably the most difficult one to understand. For that reason, here are step-by-step instructions on how to do it:
 
 1. Go to [Miners Need Cool Shoes' Banner Generator](https://www.needcoolshoes.com/banner).
    ![Step 1](/documentation/images/installation-flags1.png)
 2. Draw the flag as you want. If you're not sure how you can make your country flag, just search around the internet and you'll probably find someone that did it already.
-3. Get the flag code. It is appended to the URL when change the flag. In this case, the flag code is `eapwplpnpmbzbj`
+3. Get the flag code. It is appended to the URL when you change the flag. In this case, the flag code is `eapwplpnpmbzbj`
    ![Step 3](/documentation/images/installation-flags2.png)
 
 #### minecraft-code
 
-This is a list of the corresponding locales in Minecraft. It is currently not used for anything on the plugin, but might be used in the future to automatically set the player's language when they join. You can find the complete list of locales in the [Minecraft Wiki](https://minecraft.gamepedia.com/Language).
+This is a list of the corresponding locales in Minecraft. It is currently not used for anything on the plugin but might be used in the future to automatically set the player's language when they join. You can find the complete list of locales in the [Minecraft Wiki](https://minecraft.gamepedia.com/Language).
 
 #### display-name
 
@@ -72,14 +72,14 @@ There are 2 available variables for use: `%player%` and `%uuid%`.
 - `%player%`: Player's name
 - `%uuid`: Player's UUID (with dashes)
 
-If you're using BungeeCord, you can also limit commands to certain server, by doing something like:
+If you're using BungeeCord, you can also limit commands to certain servers by doing something like:
 `BUNGEE:lobby,lobby-2,lobby-3:alert This will only run on 3 servers!`
 
 The commands do NOT need a slash before them.
 
 ##### Examples
 
-Run command as player:
+Run command as a player:
 
 ```
 PLAYER:say I'm using English now!
@@ -112,5 +112,5 @@ To learn more about TWIN and how you can get the token, visit the [TWIN document
 
 ## Using BungeeCord
 
-To use BungeeCord (or a fork), you must enable `bungeecord` on config. Furthermore, make sure all your servers (including BungeeCord) are using the same version of the plugin, otherwise some unexpected problems may show up.  
-While using BungeeCord, your `languages.json` file is ignore in all servers except the proxy. The `languages` section on config is also ignored.
+To use BungeeCord (or a fork), you must enable `bungeecord` on config. Furthermore, make sure all your servers (including BungeeCord) are using the same version of the plugin, otherwise, some unexpected problems may show up.  
+While using BungeeCord, your `languages.json` file is ignored in all servers except the proxy. The `languages` section in the config is also ignored.

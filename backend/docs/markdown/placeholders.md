@@ -45,7 +45,7 @@ If you're not comfortable using JSON, don't worry; I've built TWIN just for that
 Save the file and type `/triton reload`.
 
 If you write `[lang]my.first.placeholder[/lang]` in the chat, it should be replaced with `This is my first placeholder!`. If so, nice job! You've just created your first placeholder.  
-Of course you won't be writing those in the chat. To take advantage of these placeholders, edit the messages of other plugins and put the placeholder there!
+Of course, you won't be writing those in the chat. To take advantage of these placeholders, edit the messages of other plugins and put the placeholder there!
 
 ## Understanding Language Items
 

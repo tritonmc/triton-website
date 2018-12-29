@@ -29,7 +29,7 @@ When you open TWIN for the first time, this is what you might see:
 ![TWIN Empty Page](/documentation/images/twin1.png)
 
 You will be presented with a search bar, an add button and a save button. There are also undo and redo buttons, but those are hidden until they are available.  
-If you have any language items, you'll also see those in the page. If not, a message saying `No items found` will show up (like above).
+If you have any language items, you'll also see those on the page. If not, a message saying `No items found` will show up (like above).
 
 ### Adding/Removing a Language Item
 
@@ -43,6 +43,6 @@ To remove an item, simply click the `DELETE` button in the editing screen. If yo
 
 ### Saving
 
-To save, simply click the `SAVE` button in the top right of your screen. Follow the instructions on-screen to apply the changes on your server. To save bandwidth, only the changes are sent to your server, not the whole file.
+To save, simply click the `SAVE` button in the top right of your screen. Follow the instructions on-screen to apply the changes to your server. To save bandwidth, only the changes are sent to your server, not the whole file.
 
 <div class="warning">It is recommended to keep a backup of your <code>languages.json</code> file when using TWIN since it is still in BETA.</div>
