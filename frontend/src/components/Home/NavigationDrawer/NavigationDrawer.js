@@ -42,10 +42,12 @@ class NavigationDrawer extends Component {
                 Documentation
               </ListItem>
             </Link>
-            <ListItem>
-              <ListItemGraphic icon="developer_board" />
-              API for Developers
-            </ListItem>
+            <a href="/api">
+              <ListItem>
+                <ListItemGraphic icon="developer_board" />
+                API for Developers
+              </ListItem>
+            </a>
           </List>
         </DrawerContent>
       </Drawer>

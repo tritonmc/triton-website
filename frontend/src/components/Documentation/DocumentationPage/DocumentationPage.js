@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./DocumentationPage.scss";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { CircularProgress } from "@rmwc/circular-progress";
 import "@rmwc/circular-progress/circular-progress.css";
 import ReactMarkdown from "react-markdown";
@@ -34,6 +34,14 @@ class DocumentationPage extends Component {
     if (oldProps.page !== this.props.page) this.setCurrentPage(this.props.page);
   }
 
+  routerLink(props) {
+    return props.href.startsWith("/docs/") ? (
+      <Link to={props.href}>{props.children}</Link>
+    ) : (
+      <a href={props.href}>{props.children}</a>
+    );
+  }
+
   render() {
     if (!this.props.page || (this.props.page.length === 0 && this.props.defaultPage.length !== 0))
       return <Redirect to={"/docs/" + this.props.defaultPage} />;
@@ -60,6 +68,7 @@ class DocumentationPage extends Component {
             className={styles.markdown}
             source={this.state.content}
             escapeHtml={false}
+            renderers={{ link: this.routerLink }}
           />
         </Container>
       </div>
