@@ -42,10 +42,6 @@ class Features extends Component {
           </ListItem>
           <ListItem>
             <ListItemGraphic icon="check" />
-            Unlimited languages
-          </ListItem>
-          <ListItem>
-            <ListItemGraphic icon="check" />
             API for developers
           </ListItem>
           <ListItem>
