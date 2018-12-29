@@ -3,6 +3,7 @@ const redirectMap = {
   "/discord": "https://discord.gg/9FsawxR",
   "/github": "https://github.com/Rexcantor/Triton/",
   "/github_issues": "https://github.com/Rexcantor/Triton/issues",
+  "/github_bugs": "https://github.com/Rexcantor/Triton/labels/bug",
   "/github_config": "https://github.com/Rexcantor/Triton/blob/master/config.yml",
   "/github_config_bungee": "https://github.com/Rexcantor/Triton/blob/master/bungee_config.yml",
   "/api": "https://github.com/Rexcantor/Triton/wiki",
