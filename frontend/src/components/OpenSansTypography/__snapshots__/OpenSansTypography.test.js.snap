@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OpenSansTypography /> renders correctly 1`] = `
+<span
+  className="mdc-typography--headline1"
+>
+  Test Typography
+</span>
+`;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Question /> renders correctly 1`] = `
+<div
+  className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4"
+>
+  <div
+    className="mdc-elevation--z8"
+  >
+    <div>
+      <i
+        className="rmwc-icon material-icons"
+      >
+        comment-question.svg
+      </i>
+      <span
+        className="mdc-typography--headline6"
+      >
+        This is a test title!
+      </span>
+    </div>
+    <br />
+    <span
+      className="mdc-typography--body1"
+    >
+      This is a test answer!
+    </span>
+  </div>
+</div>
+`;
