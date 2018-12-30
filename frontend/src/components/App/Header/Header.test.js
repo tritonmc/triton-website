@@ -1,8 +1,18 @@
 import React from "react";
-import Header from "./Header";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
+import { Header } from "./Header";
 
-it("<Header /> renders correctly", () => {
-  const tree = renderer.create(<Header />).toJSON();
-  expect(tree).toMatchSnapshot();
+describe("App/Header Component", () => {
+  let wrapper;
+  const mockToggleDrawer = jest.fn();
+
+  beforeEach(() => {
+    wrapper = shallow(<Header toggleDrawer={mockToggleDrawer} />);
+  });
+  describe("When the hamburger menu is clicked", () => {
+    it("should call the mock toggleDrawer function", () => {
+      wrapper.find("TopAppBarNavigationIcon").simulate("click", { preventDefault() {} });
+      expect(mockToggleDrawer.mock.calls.length).toBe(1);
+    });
+  });
 });

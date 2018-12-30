@@ -6,7 +6,7 @@ import { ListItem, ListItemGraphic } from "@rmwc/list";
 import { setDrawerState } from "../../../../actions/navigationActions";
 import { Link } from "react-router-dom";
 
-class NavigationItem extends Component {
+export class NavigationItem extends Component {
   render() {
     return (
       <div onClick={this.props.closeDrawer} className={styles.navItem}>

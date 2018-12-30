@@ -12,7 +12,7 @@ import { CircularProgress } from "@rmwc/circular-progress";
 import "@rmwc/circular-progress/circular-progress.css";
 import axios from "axios";
 
-class NavigationDrawer extends Component {
+export class NavigationDrawer extends Component {
   constructor() {
     super();
     this.state = {};

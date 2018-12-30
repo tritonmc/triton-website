@@ -22,11 +22,9 @@ class Splash extends Component {
           <Button raised onClick={this.onLearnMoreClick}>
             Learn More
           </Button>
-          <a
-            className="mdc-button mdc-button--outlined"
-            href="https://www.spigotmc.org/resources/triton.30331/">
+          <Button tag="a" outlined href="https://www.spigotmc.org/resources/triton.30331/">
             Buy Now
-          </a>
+          </Button>
         </div>
       </div>
     );

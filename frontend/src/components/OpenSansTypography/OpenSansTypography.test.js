@@ -1,10 +1,12 @@
 import React from "react";
 import OpenSansTypography from "./OpenSansTypography";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 
-it("<OpenSansTypography /> renders correctly", () => {
-  const tree = renderer
-    .create(<OpenSansTypography use="headline1">Test Typography</OpenSansTypography>)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+describe("OpenSansTypography Component", () => {
+  it("matches snapshot", () => {
+    const wrapper = shallow(
+      <OpenSansTypography use="headline1">Test Typography</OpenSansTypography>
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });

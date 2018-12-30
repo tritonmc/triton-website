@@ -11,7 +11,7 @@ import {
 import "@material/top-app-bar/dist/mdc.top-app-bar.css";
 import { toggleDrawer } from "../../../actions/navigationActions";
 
-class Header extends Component {
+export class Header extends Component {
   render() {
     return (
       <TopAppBar short className={styles.navbar}>

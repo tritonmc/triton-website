@@ -8,7 +8,7 @@ import ReactMarkdown from "react-markdown";
 import axios from "axios";
 import Container from "../../Container/Container";
 
-class DocumentationPage extends Component {
+export class DocumentationPage extends Component {
   constructor() {
     super();
     this.state = {};
@@ -43,7 +43,7 @@ class DocumentationPage extends Component {
   }
 
   render() {
-    if (!this.props.page || (this.props.page.length === 0 && this.props.defaultPage.length !== 0))
+    if ((!this.props.page || this.props.page.length === 0) && this.props.defaultPage.length !== 0)
       return <Redirect to={"/docs/" + this.props.defaultPage} />;
     if (this.state.error)
       return (

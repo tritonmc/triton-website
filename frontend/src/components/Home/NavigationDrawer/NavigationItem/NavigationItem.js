@@ -6,7 +6,7 @@ import { ListItem, ListItemGraphic } from "@rmwc/list";
 import { setDrawerState } from "../../../../actions/navigationActions";
 import ScrollIntoView from "react-scroll-into-view";
 
-class NavigationItem extends Component {
+export class NavigationItem extends Component {
   render() {
     return (
       <div onClick={this.props.closeDrawer} className={styles.navItem}>
