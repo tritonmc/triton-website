@@ -24,6 +24,8 @@ Just send me a PM on Spigot asking for your TWIN token.
 
 ## Using TWIN
 
+To open your config on TWIN, type `/twin` in-game or on your console.
+
 When you open TWIN for the first time, this is what you might see:
 
 ![TWIN Empty Page](/documentation/images/twin1.png)
