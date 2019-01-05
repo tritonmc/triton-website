@@ -47,6 +47,8 @@ Save the file and type `/triton reload`.
 If you write `[lang]my.first.placeholder[/lang]` in the chat, it should be replaced with `This is my first placeholder!`. If so, nice job! You've just created your first placeholder.  
 Of course, you won't be writing those in the chat. **To take advantage of these placeholders, edit the messages of other plugins and put the placeholder there!**
 
+If you are not sure how to use the `languages.json` file, take a look at these [examples](https://github.com/Rexcantor/Triton/tree/v1/examples).
+
 ### Advanced placeholders (using variables)
 
 Advanced placeholders work just like normal placeholders, but they can have variables (arguments) inside them. For example, if you need to translate a message like _"Player1 killed Player2"_, you want replace _Player1_ and _Player2_ with they actual player names. To do that, replace them in `languages.json` by `%1` and `%2` respectively.
