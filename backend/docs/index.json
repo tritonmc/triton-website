@@ -6,6 +6,7 @@
     { "name": "Placeholders", "page": "placeholders" },
     { "name": "Commands and Permissions", "page": "commands" },
     { "name": "TWIN", "page": "twin" },
+    { "name": "clip's PlaceholderAPI", "page": "placeholderapi" },
     { "name": "Flags", "page": "flags" }
   ],
   "default": "get-started"
