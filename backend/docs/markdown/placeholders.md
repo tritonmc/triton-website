@@ -45,7 +45,33 @@ If you're not comfortable using JSON, don't worry; I've built TWIN just for that
 Save the file and type `/triton reload`.
 
 If you write `[lang]my.first.placeholder[/lang]` in the chat, it should be replaced with `This is my first placeholder!`. If so, nice job! You've just created your first placeholder.  
-Of course, you won't be writing those in the chat. To take advantage of these placeholders, edit the messages of other plugins and put the placeholder there!
+Of course, you won't be writing those in the chat. **To take advantage of these placeholders, edit the messages of other plugins and put the placeholder there!**
+
+If you are not sure how to use the `languages.json` file, take a look at these [examples](https://github.com/Rexcantor/Triton/tree/v1/examples).
+
+### Advanced placeholders (using variables)
+
+Advanced placeholders work just like normal placeholders, but they can have variables (arguments) inside them. For example, if you need to translate a message like _"Player1 killed Player2"_, you want replace _Player1_ and _Player2_ with they actual player names. To do that, replace them in `languages.json` by `%1` and `%2` respectively.
+
+This is what the language item should look like (`death.kill` is used as the key in this example, but you can use whatever you want; to learn more, read the rest of this page):
+
+```json
+{
+  "type": "text",
+  "key": "death.kill",
+  "languages": {
+    "en_GB": "%1 killed %2",
+    "pt_PT": "%1 matou %2"
+  }
+}
+```
+
+To add the arguments to the placeholder, you need to use two more special tags: `[args]` and `[arg]`.  
+The first tag, `[args]`, tells the plugin that this placeholder contains variables.  
+The second one, `[arg]`, tells the plugin what are the values of those variables.
+
+For example, to get the message _"Player1 killed Player2"_, you'd have to use the following placeholder: `[lang]death.kill[args][arg]Player1[/arg][arg]Player2[/arg][/args][/lang]`. In this case, `%1` would be replaced by `Player1` and `%2` by `Player2`.  
+You can put anything inside the `[arg][/arg]` tags, even other placeholders!
 
 ## Understanding Language Items
 
