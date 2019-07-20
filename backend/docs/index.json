@@ -4,6 +4,7 @@
     { "name": "Migrating from v0", "page": "migrating-from-v0" },
     { "name": "Installation and Configuration", "page": "installation" },
     { "name": "Placeholders", "page": "placeholders" },
+    { "name": "How to get your first message translated", "page": "first-message" },
     { "name": "Commands and Permissions", "page": "commands" },
     { "name": "TWIN", "page": "twin" },
     { "name": "clip's PlaceholderAPI", "page": "placeholderapi" },
