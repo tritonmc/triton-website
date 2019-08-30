@@ -110,7 +110,9 @@ const Sidebar = ({ open, toggle }) => {
     <Drawer open={open} onClose={toggle}>
       <div className={classes.title}>
         <Typography variant='h6'>Triton</Typography>
-        <Typography variant='subtitle2'>Translate your server</Typography>
+        <Typography variant='subtitle2' color='textSecondary'>
+          Translate your server
+        </Typography>
       </div>
       <Divider />
       <List className={classes.list}>

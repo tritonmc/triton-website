@@ -1,3 +1,10 @@
+---
+title: 'Installation and Configuration'
+order: 2
+---
+
+import InfoCard from '../../components/InfoCard';
+
 # Installation
 
 The process of installing the plugin is fairly simple:
@@ -19,7 +26,9 @@ Nonetheless, here is a brief explanation on how to configure the main features o
 
 ### Adding/Removing languages
 
-<div class="warning">If you're using BungeeCord, you only need to do this in your BungeeCord Triton config.</div>
+<InfoCard>
+  If you're using BungeeCord, you only need to do this in your BungeeCord Triton config.
+</InfoCard>
 
 Open your `config.yml` and locate the `languages` section.  
 To remove a language, just delete it from the file.  
@@ -33,9 +42,9 @@ pt:
   minecraft-code:
     - pt_PT
     - pt_BR
-  display-name: "&aPortuguese"
+  display-name: '&aPortuguese'
   commands:
-    - "SERVER:say %player% (%uuid%) has just changed their language!"
+    - 'SERVER:say %player% (%uuid%) has just changed their language!'
 ```
 
 In this example, `pt` represents the Language ID (LID for short). This LID is used to store the player's language between shutdowns and across servers, as well as an argument to in-game commands. Changing the LID after someone has selected that language will result in the player's language being set to default.
@@ -45,10 +54,10 @@ In this example, `pt` represents the Language ID (LID for short). This LID is us
 The flag parameter is probably the most difficult one to understand. For that reason, here are step-by-step instructions on how to do it:
 
 1. Go to [Miners Need Cool Shoes' Banner Generator](https://www.needcoolshoes.com/banner).
-   ![Step 1](/documentation/images/installation-flags1.png)
+   ![Step 1](../../img/docs/installation-flags1.png)
 2. Draw the flag as you want. If you're not sure how you can make your country flag, just search around the internet and you'll probably find someone that did it already.
 3. Get the flag code. It is appended to the URL when you change the flag. In this case, the flag code is `eapwplpnpmbzbj`
-   ![Step 3](/documentation/images/installation-flags2.png)
+   ![Step 3](../../img/docs/installation-flags2.png)
 
 #### minecraft-code
 
@@ -56,7 +65,7 @@ This is a list of the corresponding locales in Minecraft. It is currently not us
 
 #### display-name
 
-This is fairly obvious. This is what will show up as the language name in chat and the selection GUI. Feel free to use color codes and [Triton placeholders](/docs/placeholders) here.
+This is fairly obvious. This is what will show up as the language name in chat and the selection GUI. Feel free to use color codes and [Triton placeholders](~/docs/placeholders) here.
 
 #### commands
 
@@ -97,8 +106,14 @@ Run command on BungeeCord console, but only if the player is on the `lobby` serv
 BUNGEE:lobby:alert This will only run on lobby!
 ```
 
-<div class="warning">(BungeeCord only) If a command you're using contains a <code>:</code> and you want it to be universal, do something like this:
-<code>PLAYER::give @a minecraft:dirt</code></div>
+<InfoCard>
+
+_(BungeeCord only)_ If a command you're using contains a `:` and you want it to be
+universal, do something like this:
+
+`PLAYER::give @a minecraft:dirt`
+
+</InfoCard>
 
 ### main-language
 
@@ -108,7 +123,7 @@ This will be the default language of a player when they join the server for the 
 ### twin-token
 
 If you're using BungeeCord, you only need to place your TWIN token in the BungeeCord Triton's config.  
-To learn more about TWIN and how you can get the token, visit the [TWIN documentation page](/docs/twin).
+To learn more about TWIN and how you can get the token, visit the [TWIN documentation page](~/docs/twin).
 
 ## Using BungeeCord
 

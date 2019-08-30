@@ -31,12 +31,14 @@
     "gatsby-plugin-sharp": "^2.2.18",
     "gatsby-remark-copy-linked-files": "^2.1.13",
     "gatsby-remark-images": "^3.1.19",
+    "gatsby-remark-prismjs": "^3.3.11",
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-filesystem": "^2.1.18",
     "gatsby-transformer-remark": "^2.6.19",
     "gatsby-transformer-sharp": "^2.2.12",
     "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.15",
+    "prismjs": "^1.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
@@ -48,7 +50,8 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "serve": "gatsby serve"
   },
   "eslintConfig": {
     "extends": "react-app"
