@@ -32,11 +32,14 @@ const Splash = ({ title, subtitle }) => {
       <Typography variant='h1'>{title}</Typography>
       <Typography variant='h3'>{subtitle}</Typography>
       <br />
-      <Button variant='contained' color='primary' className={classes.button}>
-        Learn More
-      </Button>
-      <Button variant='contained' color='primary' className={classes.button}>
-        Buy Now
+      <Button
+        variant='contained'
+        color='primary'
+        className={classes.button}
+        component='a'
+        href='/spigot'
+      >
+        Buy Now on SpigotMC
       </Button>
     </div>
   );
