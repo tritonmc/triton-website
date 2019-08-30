@@ -12,6 +12,8 @@ const useStyles = makeStyles({
     '& > *': {
       margin: '5px',
     },
+    width: 'fit-content',
+    margin: '20px 0',
   },
 });
 
