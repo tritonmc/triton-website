@@ -18,6 +18,7 @@ import { graphql, Link, StaticQuery } from 'gatsby';
 import DocsIcon from '@material-ui/icons/BookRounded';
 import APIIcon from '@material-ui/icons/DeveloperBoardRounded';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const styles = (theme) => ({
   root: {
@@ -58,6 +59,9 @@ class Header extends React.Component {
         `}
         render={(data) => (
           <div className={classes.root}>
+            <Helmet
+              title={`${this.props.currentPage} | ${data.site.siteMetadata.title} - ${data.site.siteMetadata.description}`}
+            />
             <AppBar position='static'>
               <Toolbar>
                 <Hidden smUp>

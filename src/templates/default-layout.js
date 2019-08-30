@@ -19,7 +19,7 @@ const DefaultLayout = ({ children }) => {
       components={{
         ...['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].reduce((map, v) => {
           map[v] = (props) => (
-            <Typography {...props} variant='h1' className={classes.headings}></Typography>
+            <Typography {...props} variant={v} className={classes.headings}></Typography>
           );
           return map;
         }, {}),
