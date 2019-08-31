@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Triton',
     description: 'Translate your server',
+    siteUrl: 'https://triton.rexcantor64.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
