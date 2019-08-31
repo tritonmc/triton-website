@@ -40,6 +40,12 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: drawerWidth,
   },
+  itemSelected: {
+    backgroundColor: 'rgba(0, 0, 0, 0.14)',
+    '&:hover': {
+      backgroundColor: 'rgba(0, 0, 0, 0.14)',
+    },
+  },
 }));
 
 const Header = ({ currentPage }) => {
@@ -88,7 +94,13 @@ const Header = ({ currentPage }) => {
             </Hidden>
             <List>
               {data.allSitePage.edges.map((node) => (
-                <ListItem key={node.node.path} button component={Link} to={node.node.path}>
+                <ListItem
+                  key={node.node.path}
+                  button
+                  component={Link}
+                  to={node.node.path}
+                  activeClassName={classes.itemSelected}
+                >
                   <ListItemText>{node.node.context.frontmatter.title}</ListItemText>
                 </ListItem>
               ))}
