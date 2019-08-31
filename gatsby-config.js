@@ -61,6 +61,27 @@ module.exports = {
     `gatsby-plugin-top-layout`,
     'gatsby-transformer-sharp',
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Triton - Translate your server`,
+        short_name: `Triton`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#008ff8`,
+        display: `standalone`,
+        icon: `src/img/triton.png`, // This path is relative to the root of the site.
+      },
+    },
+    // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
+    `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://triton.rexcantor64.com',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-material-ui',
     },
     {
