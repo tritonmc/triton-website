@@ -3,7 +3,7 @@ import { navigate } from 'gatsby';
 
 export default () => {
   useEffect(() => {
-    navigate('/');
+    navigate('/', { replace: true });
   }, []);
   return null;
 };
