@@ -14,7 +14,7 @@ It looks just like [BBCode](https://en.wikipedia.org/wiki/BBCode), so it's reall
 
 ## How can I create my first placeholder?
 
-It's really simple to get started! Simply open the `languages.json` file and add this object to the JSON array:
+It's really simple to get started! Simply open the `translations/default.json` file and add this object to the JSON array:
 
 ```json
 {
@@ -27,8 +27,8 @@ It's really simple to get started! Simply open the `languages.json` file and add
 }
 ```
 
-For further reference, this JSON Object will be called **Language Item**.
-If this is the first time you opened your `languages.json` file, this is how it should look like right now:
+For further reference, this JSON Object will be called **Translatable Item**.
+If this is the first time you opened your `translations/default.json` file, this is how it should look like right now:
 
 ```json
 [
@@ -43,22 +43,30 @@ If this is the first time you opened your `languages.json` file, this is how it 
 ]
 ```
 
-Remember, to make sure you're using valid JSON, use a JSON parser. There are hundreds of JSON parsers online, but [here](https://jsonformatter.org/json-pretty-print) is one (completely random one).
+Remember, to make sure you're using valid JSON, use a JSON parser.
+There are hundreds of JSON parsers online, but [here](https://jsonformatter.org/json-pretty-print) is one (completely random one).
 
-If you're not comfortable using JSON, don't worry; I've built TWIN just for that! TWIN helps you to easily manage your `languages.json` without having to write a single line of JSON. You can get started with TWIN [here](~/docs/twin).
+If you're not comfortable using JSON, don't worry;
+I've built TWIN just for that! TWIN helps you to easily manage your `translations` folder without having to write a single line of JSON.
+You can get started with TWIN [here](~/docs/twin).
 
 Save the file and type `/triton reload`.
 
-If you write `[lang]my.first.placeholder[/lang]` in the chat, it should be replaced with `This is my first placeholder!`. If so, nice job! You've just created your first placeholder.  
-Of course, you won't be writing those in the chat. **To take advantage of these placeholders, edit the messages of other plugins and put the placeholder there!**
+If you write `[lang]my.first.placeholder[/lang]` in the chat, it should be replaced with `This is my first placeholder!`.
+If so, nice job! You've just created your first placeholder.  
+Of course, you won't be writing those in the chat.
+**To take advantage of these placeholders, edit the messages of other plugins and put the placeholder there!**
 
-If you are not sure how to use the `languages.json` file, take a look at these [examples](https://github.com/Rexcantor/Triton/tree/v1/examples).
+If you are not sure how to use the `translations/default.json` file, take a look at these [examples](https://github.com/Rexcantor/Triton/tree/v1/examples).
 
 ### Advanced placeholders (using variables)
 
-Advanced placeholders work just like normal placeholders, but they can have variables (arguments) inside them. For example, if you need to translate a message like _"Player1 killed Player2"_, you want replace _Player1_ and _Player2_ with they actual player names. To do that, replace them in `languages.json` by `%1` and `%2` respectively.
+Advanced placeholders work just like normal placeholders, but they can have variables (arguments) inside them.
+For example, if you need to translate a message like _"Player1 killed Player2"_, you want replace _Player1_ and _Player2_ with they actual player names.
+To do that, replace them in `translations/default.json` by `%1` and `%2` respectively.
 
-This is what the language item should look like (`death.kill` is used as the key in this example, but you can use whatever you want; to learn more, read the rest of this page):
+This is what the translatable item should look like
+(`death.kill` is used as the key in this example, but you can use whatever you want; to learn more, read the rest of this page):
 
 ```json
 {
@@ -75,22 +83,29 @@ To add the arguments to the placeholder, you need to use two more special tags: 
 The first tag, `[args]`, tells the plugin that this placeholder contains variables.  
 The second one, `[arg]`, tells the plugin what are the values of those variables.
 
-For example, to get the message _"Player1 killed Player2"_, you'd have to use the following placeholder: `[lang]death.kill[args][arg]Player1[/arg][arg]Player2[/arg][/args][/lang]`. In this case, `%1` would be replaced by `Player1` and `%2` by `Player2`.  
+For example, to get the message _"Player1 killed Player2"_,
+you'd have to use the following placeholder: `[lang]death.kill[args][arg]Player1[/arg][arg]Player2[/arg][/args][/lang]`.
+In this case, `%1` would be replaced by `Player1` and `%2` by `Player2`.  
 You can put anything inside the `[arg][/arg]` tags, even other placeholders!
 
-## Understanding Language Items
+## Understanding Translatable Items
 
-Back to that example. As you can see, I start the Language Item with `"type": "text"` (order doesn't really matter inside JSON Objects). This tells the plugin that this object represents a text message. Right now, `type` can only be two things: `text` or `sign`. I'll get to signs later.
+Back to that example. As you can see, I start the Translatable Item with `"type": "text"` (order doesn't really matter inside JSON Objects).
+This tells the plugin that this object represents a text message.
+Right now, `type` can only be two things: `text` or `sign`. I'll get to signs later.
 
-After that, we have the `key` parameter. This is what will identify the language items, so you can refer to them while using placeholders.  
+After that, we have the `key` parameter. This is what will identify the translatable items, so you can refer to them while using placeholders.  
 In the example above, I used `my.first.placeholder`, but it can be literally anything.
 
-Finally, we have the `languages` parameter. This is where you'll write the actual text that will be replaced in-game. You can add as many languages as you want.  
-In the example above, I used `en_GB` and `pt_PT` as my only languages. These should match the Language IDs that are on your `config.yml`.
+Finally, we have the `languages` parameter.
+This is where you'll write the actual text that will be replaced in-game.
+You can add as many languages as you want.  
+In the example above, I used `en_GB` and `pt_PT` as my only languages.
+These should match the Language IDs that are on your `config.yml`.
 
 ## Signs
 
-**Language Signs** look a bit different. As said previously, their type is `sign` instead of `text`.  
+**Translatable Signs** look a bit different. As said previously, their type is `sign` instead of `text`.  
 Here is an example of a working sign:
 
 ```json
@@ -118,7 +133,7 @@ Here is an example of a working sign:
 }
 ```
 
-As you can see, its layout is fairly different from Language Texts.  
+As you can see, its layout is fairly different from Translatable Texts.  
 It still has a `key` parameter that is only used in the `/triton sign` command.
 
 The `lines` parameter is similar to `languages`, but instead of strings, it has a list of 4 strings (the lines of the sign).
@@ -127,7 +142,7 @@ Finally, the `locations` parameter holds a list of all the signs in this **Sign 
 
 At the moment, only static signs are supported. You can't provide dynamic arguments to signs.
 
-## Available Parameters for Language Items
+## Available Parameters for Translatable Items
 
 Here is a full list of supported parameters:
 
@@ -211,6 +226,13 @@ If you're using BungeeCord, you must also include a `server` parameter in each l
   "z": 291
 }
 ```
+
+### patterns
+
+_optional | `text` only_
+**Type**: String (regex) array
+**Default**: `[]`
+If any of the regex strings in this array matches a message (everywhere except scoreboards and signs), it will be replaced with the translation.
 
 ### universal
 

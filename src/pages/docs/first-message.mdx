@@ -1,7 +1,9 @@
 ---
 title: 'How to get your first message translated'
-order: 4
+order: 5
 ---
+
+import InfoCard from '../../components/InfoCard.js';
 
 # How to get your first message translated
 
@@ -18,14 +20,14 @@ In this page, I'm going to use [EssentialsX](https://www.spigotmc.org/resources/
 
 In this section we're going to go into EssentialsX's locale files and change one of the messages to a placeholder.
 
-<div class='warning'>
-  For some reason, EssentialsX doesn't allow you to change their messages out of the box, so you
-  need to go to their{' '}
-  <a href='https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/messages.properties'>
-    GitHub
-  </a>
-  , grab the file and place it into your <code>plugins/Essentials</code> folder.
-</div>
+<InfoCard>
+
+For some reason, EssentialsX doesn't allow you to change their messages out of the box, so you
+need to go to their
+[GitHub](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/messages.properties),
+grab the file and place it into your `plugins/Essentials` folder.
+
+</InfoCard>
 
 For the following steps, it is recommended to use a proper text editor like [Nodepad++](https://notepad-plus-plus.org/) or [VSCode (recommended)](https://code.visualstudio.com/). Both are free and easy to setup.
 
@@ -66,11 +68,11 @@ _Make sure to [read the docs](~/docs/twin) about TWIN first._
 4. Fill in the **Text** section however you like.
 5. Save and execute the provided command ingame.
 
-#### Using languages.json
+#### Using the translations folder
 
 _Make sure to [read the docs](~/docs/placeholders) about placeholders first._
 
-1. Open `languages.json`
+1. Open `translations/default.json`
 2. Add the following item:
 
 ```json
@@ -80,12 +82,10 @@ _Make sure to [read the docs](~/docs/placeholders) about placeholders first._
     "languages": [
         "en_GB": "&6Your appetite was sated.",
         "pt_PT": "&6O teu apetite foi saciado."
-    ],
-    "universal": true
+    ]
 }
 ```
 
-You don't need to include `universal` if you're not using BungeeCord.  
 Save the file and reload the plugin.
 
 ### Using an advanced placeholder
@@ -99,4 +99,5 @@ This is the placeholder that we should put in `messages.properties`:
 addedToAccount=[lang]essentials.addedToAccount[args][arg]{0}[/arg][/args][/lang]
 ```
 
-To configure it in Triton, just do the same thing as before. To use the argument, just place `%1` in any of the messages and it will be replaced by the argument provided in the placeholder.
+To configure it in Triton, just do the same thing as before.
+To use the argument, just place `%1` in any of the messages and it will be replaced by the argument provided in the placeholder.

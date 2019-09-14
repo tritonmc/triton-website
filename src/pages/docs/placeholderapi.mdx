@@ -1,6 +1,6 @@
 ---
 title: "clip's PlaceholderAPI"
-order: 7
+order: 8
 ---
 
 # PlaceholderAPI
@@ -18,3 +18,11 @@ Here are some examples on how to use this integration:
   **Using PlaceholderAPI:** `%triton_some_plugin_message%`
 - **Using Triton Placeholders:** `[lang]message.with.arguments[args][arg]some argument[/arg][/args][/lang]`  
   **Using PlaceholderAPI:** _not supported_
+
+## Using variables
+
+While variables are not directly supported, you can use multiple placeholders to replicate the desired behaviour.
+
+**Example:**
+
+`%triton_placeholder1% some argument %triton_placeholder2%`

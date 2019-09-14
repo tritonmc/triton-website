@@ -14,6 +14,9 @@ const useStyles = makeStyles({
     },
     width: 'fit-content',
     margin: '20px 0',
+    '& a': {
+      color: '#ffab40',
+    },
   },
 });
 
