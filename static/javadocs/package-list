@@ -1,5 +1,6 @@
 com.rexcantor64.triton.api
 com.rexcantor64.triton.api.config
+com.rexcantor64.triton.api.events
 com.rexcantor64.triton.api.language
 com.rexcantor64.triton.api.players
 com.rexcantor64.triton.api.wrappers
