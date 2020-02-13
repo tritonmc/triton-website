@@ -3,6 +3,8 @@ title: 'Placeholders'
 order: 3
 ---
 
+import WarningCard from '../../components/WarningCard';
+
 # Placeholders
 
 This is by far the most complex part of the plugin. So let's dive in!
@@ -58,6 +60,13 @@ Of course, you won't be writing those in the chat.
 **To take advantage of these placeholders, edit the messages of other plugins and put the placeholder there!**
 
 If you are not sure how to use the `translations/default.json` file, take a look at these [examples](https://github.com/Rexcantor/Triton/tree/v1/examples).
+
+<WarningCard>
+
+Since various kinds of text in Minecraft have length limits, most plugins truncate thoses texts if they would cause the client to crash.  
+Because of that, Triton might not be able to detect a placeholder if it has been truncated. To fix that, reduce the key length and try again.
+
+</WarningCard>
 
 ### Advanced placeholders (using variables)
 
