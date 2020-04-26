@@ -1,3 +1,3 @@
 # triton-website
 
-Website and wiki for Triton
+Website and documentation for [Triton](https://triton.rexcantor64.com)
