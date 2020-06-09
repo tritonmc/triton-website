@@ -9,3 +9,5 @@ footer: Copyright © 2016-2020 Diogo Correia
 ---
 
 Welcome to Triton's Documentation.
+
+This documentation only applies to Triton v3.0.0-beta.x.

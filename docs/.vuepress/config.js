@@ -133,28 +133,38 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Improve this page',
     lastUpdated: 'Last Updated',
+    smoothScroll: true,
     serviceWorker: true,
-    sidebarDepth: 1,
+    sidebarDepth: 2,
     sidebar: [
       {
         collapsable: false,
         title: '🚀 Getting Started',
-        children: ['/getting-started/installation'],
+        children: [
+          '/getting-started/beta-enrollment',
+          '/getting-started/installation',
+          '/getting-started/initial-configuration',
+        ],
       },
       {
         collapsable: true,
         title: '💡 Concepts',
-        children: ['/concepts/translations'],
+        children: ['/concepts/config', '/concepts/translations'],
       },
       {
         collapsable: true,
         title: '📚 Guides',
-        children: ['/guides/first-translation'],
+        children: ['/guides/first-translation', '/guides/flags'],
       },
       {
         collapsable: true,
         title: '🔌 Programatic API',
         children: ['/programatic-api/getting-started'],
+      },
+      {
+        collapsable: true,
+        title: '📦 Migration Guides',
+        children: ['/migration/v2-to-v3-beta.x'],
       },
     ],
   },
