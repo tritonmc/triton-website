@@ -135,7 +135,7 @@ module.exports = {
     lastUpdated: 'Last Updated',
     smoothScroll: true,
     serviceWorker: true,
-    sidebarDepth: 2,
+    sidebarDepth: 1,
     sidebar: [
       {
         collapsable: false,
@@ -149,7 +149,16 @@ module.exports = {
       {
         collapsable: true,
         title: '💡 Concepts',
-        children: ['/concepts/config', '/concepts/translations'],
+        children: [
+          '/concepts/config',
+          '/concepts/commands-permissions',
+          '/concepts/translations',
+          '/concepts/placeholders',
+          '/concepts/twin',
+          '/concepts/patterns',
+          '/concepts/placeholderapi',
+          '/concepts/dynamic-signs',
+        ],
       },
       {
         collapsable: true,
@@ -164,7 +173,7 @@ module.exports = {
       {
         collapsable: true,
         title: '📦 Migration Guides',
-        children: ['/migration/v2-to-v3-beta.x'],
+        children: ['/migration/v2-to-v3-beta.x', '/migration/v1-to-v2', '/migration/v0-to-v1'],
       },
     ],
   },

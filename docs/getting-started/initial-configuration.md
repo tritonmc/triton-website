@@ -13,9 +13,19 @@ There are two types of installation:
 
 With that in mind, let's get started.
 
+---
+
+Before proceeding, if you've chosen the **BungeeCord network** approach,
+you **must** enable `bungeecord` on Triton's `config.yml` for every
+Spigot server.
+
+```yaml
+bungeecord: true
+```
+
 ## Storage type
 
-Triton currently supports local (json) storage and MySQL storage.
+Triton currently supports local (JSON) storage and MySQL storage.
 MongoDB support is in the works, but it's not supported at the moment.
 
 If you want to use local storage, you don't need the make any changes, it's good to go out of the box.
@@ -47,7 +57,7 @@ The `server-name` variable is only used for non-local storage types.
 :::
 
 ::: warning
-If you're using the BungeeCord network aproach, you must use the same storage configuration on all servers, including on BungeeCord itself.
+If you're using the BungeeCord network approach, you must use the same storage configuration on all servers, including on BungeeCord itself.
 If you fail to do that, translations might not be loaded correctly.
 :::
 
@@ -105,7 +115,7 @@ you only need to configure the languages on the BungeeCord server.
 ## Translations
 
 The best way to add and edit translations easily is using TWIN.
-To use it, you must first get a TWIN token.
+To use it, you must first [get a TWIN token](/concepts/twin).
 
 To get the token, you can either join our [Discord server](https://triton.rexcantor64.com/discord)
 or DM me (Rexcantor64) on Spigot.

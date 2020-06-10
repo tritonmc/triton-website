@@ -12,11 +12,12 @@ If you prefer a video tutorial of this guide, you can follow the official get st
 
 Before proceeding, it is important to note that there are 5 ways to translate messages using Triton.
 This guide will only talk about the first two:
-  - Triton Placeholders
-  - Triton Advanced Placeholders
-  - Triton Patterns
-  - PlaceholderAPI
-  - [Triton API](/programatic-api/getting-started)
+
+- [Triton Placeholders](/concepts/placeholders)
+- [Triton Advanced Placeholders](/concepts/placeholders.html#advanced-placeholders-using-variables)
+- [Triton Patterns](/concepts/patterns)
+- PlaceholderAPI
+- [Triton API](/programatic-api/getting-started)
 
 ### Triton Placeholders
 
@@ -26,12 +27,11 @@ more precisely the `info.NoPermission` message:
 ```yaml{3}
 info:
   prefix: '&e[&aCMI&e] '
-  NoPermission: '&cYou don''t have permission!'
-  CantHavePermission: '&cYou can''t have this permission!'
-  NoPlayerPermission: '&c[playerName] doesn''t have permission for: [permission]'
+  NoPermission: "&cYou don't have permission!"
+  CantHavePermission: "&cYou can't have this permission!"
+  NoPlayerPermission: "&c[playerName] doesn't have permission for: [permission]"
   Ingame: '&cYou can only use this in game!'
   NoInformation: '&cNo information found!'
-...
 ```
 
 As we can see, the `info.NoPermission` message is pretty simple to translate because it doesn't have any kind of variables.
@@ -50,14 +50,15 @@ Proceed to create a new translation item. When prompted, select _Text_ as the ty
 ![Add translation button](./first-translation1.png)
 
 Then, fill in the information as needed:
-  - **Key**: `cmi.info.NoPermission`
-  - **en_GB**: `&cYou don't have permission!`
-  - Translate accordingly to other languages.
+
+- **Key**: `cmi.info.NoPermission`
+- **en_GB**: `&cYou don't have permission!`
+- Translate accordingly to other languages.
 
 ![Filled in information for translation text item](./first-translation2.png)
 
 After that's done, click the `X` button on the top left corner (or hit `ESC` on your keyboard) to go back to the dashboard.
-You can repeat this proccess for other translations.
+You can repeat this process for other translations.
 
 When you're ready, hit `Save` in the top right corner of the dashboard.
 Follow the on-screen instructions to download the translations to the server.
@@ -108,11 +109,10 @@ With that in mind, you can simply replace the original message with the placehol
 info:
   prefix: '&e[&aCMI&e] '
   NoPermission: '[lang]cmi.info.NoPermission[/lang]'
-  CantHavePermission: '&cYou can''t have this permission!'
-  NoPlayerPermission: '&c[playerName] doesn''t have permission for: [permission]'
+  CantHavePermission: "&cYou can't have this permission!"
+  NoPlayerPermission: "&c[playerName] doesn't have permission for: [permission]"
   Ingame: '&cYou can only use this in game!'
   NoInformation: '&cNo information found!'
-...
 ```
 
 ### Triton Advanced Placeholders
@@ -127,11 +127,10 @@ This is where we left off in the previous section:
 info:
   prefix: '&e[&aCMI&e] '
   NoPermission: '[lang]cmi.info.NoPermission[/lang]'
-  CantHavePermission: '&cYou can''t have this permission!'
-  NoPlayerPermission: '&c[playerName] doesn''t have permission for: [permission]'
+  CantHavePermission: "&cYou can't have this permission!"
+  NoPlayerPermission: "&c[playerName] doesn't have permission for: [permission]"
   Ingame: '&cYou can only use this in game!'
   NoInformation: '&cNo information found!'
-...
 ```
 
 We're now going to translate the `info.NoPlayerPermission` message.
@@ -151,14 +150,14 @@ The result should be something like `&c%1 doesn''t have permission for: %2`.
 ::: tip
 Now matter how the plugin you're translating handles variables,
 you'll always need to replace them with `%1`, `%2`, `%3`, etc...  
-The original variables will be used in *Step 2*.
+The original variables will be used in _Step 2_.
 :::
 
 #### Step 2 - Replace the original message with the placeholder
 
 This step is also very similar with the one from the previous section.  
 When using variables, the format differs slightly:
-```[lang]insert.translation.key.here[args][arg]variable1[/arg][arg]variable2[/arg][/args][/lang]```.
+`[lang]insert.translation.key.here[args][arg]variable1[/arg][arg]variable2[/arg][/args][/lang]`.
 
 Keep in mind that everything inside the `[arg][/arg]` tags will be used as a replacement
 to `%1`, `%2`, etc in the final message, following the order in which they were added.
@@ -169,11 +168,10 @@ This is how we'll use it for our use-case:
 info:
   prefix: '&e[&aCMI&e] '
   NoPermission: '[lang]cmi.info.NoPermission[/lang]'
-  CantHavePermission: '&cYou can''t have this permission!'
+  CantHavePermission: "&cYou can't have this permission!"
   NoPlayerPermission: '[lang]cmi.info.NoPlayerPermission[args][arg][playerName][/arg][arg][permission][/arg][/args][/lang]'
   Ingame: '&cYou can only use this in game!'
   NoInformation: '&cNo information found!'
-...
 ```
 
 ## Using the automated generator tool
@@ -182,6 +180,6 @@ An [open-source tool](https://triton-generator.rexcantor64.com/) is in the works
 that'll mostly automate these steps.
 A guide on how to use it will be available later.
 
-Already generated translations for some plugins is available in the 
+Already generated translations for some plugins is available in the
 [triton-translation-collection](https://github.com/tritonmc/triton-translation-collection)
 GitHub repository.

@@ -1,3 +1,3 @@
 # Translations
 
-Needs work
+This page is under construction.
