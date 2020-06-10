@@ -118,7 +118,7 @@ twin-token: ''
 ```
 
 ::: tip
-If you're using the BungeeCord network appreach, you don't need to put the token in any Spigot server.
+If you're using the BungeeCord network approach, you don't need to put the token in any Spigot server.
 :::
 
 After getting access to TWIN, follow the [translating your first message guide](/guides/first-translation).
