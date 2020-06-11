@@ -25,6 +25,8 @@
     "gatsby-source-filesystem": "^2.1.18",
     "gatsby-transformer-remark": "^2.6.19",
     "gatsby-transformer-sharp": "^2.3.2",
+    "patch-package": "^6.2.2",
+    "postinstall-postinstall": "^2.1.0",
     "prismjs": "^1.17.1",
     "react": "^16.11.0",
     "react-dom": "^16.9.0",
@@ -39,7 +41,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "postinstall": "patch-package"
   },
   "eslintConfig": {
     "extends": "react-app"
