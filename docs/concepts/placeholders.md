@@ -51,7 +51,7 @@ You can also use an IDE like [Visual Studio Code](https://code.visualstudio.com)
 
 If you're not comfortable using JSON, don't worry;
 I've built TWIN just for that! TWIN helps you to easily manage your `translations` folder without having to write a single line of JSON.
-You can get started with TWIN [here](/concepts/twin).
+You can get started with TWIN [here](./twin.md).
 
 Save the file and type `/triton reload`.
 
@@ -149,7 +149,7 @@ The `lines` parameter is similar to `languages`, but instead of strings, it has 
 Finally, the `locations` parameter holds a list of all the signs in this **Sign Group**.
 
 At the moment, only static signs are supported. You can't provide dynamic arguments to signs.
-Take a look at [dynamic signs](/concepts/dynamic-signs) if you want to translate signs
+Take a look at [dynamic signs](./dynamic-signs.md) if you want to translate signs
 that have dynamic information (e.g. game join, shops).
 
 ## Available Parameters for Translatable Items

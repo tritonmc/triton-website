@@ -13,7 +13,7 @@ This page is a guide on Triton's `config.yml` file.
 ### `flag`
 
 Represents the flag to show up in the banner in the language selection menu.
-Follow the [generating a flag guide](/guides/flags) if you don't know what to put here.
+Follow the [generating a flag guide](../guides/flags.md) if you don't know what to put here.
 
 ### `minecraft-code`
 
@@ -27,7 +27,7 @@ You can find the complete list of locales in the
 
 This is fairly obvious.
 This is what will show up as the language name in chat and the selection GUI.
-Feel free to use color codes and [Triton placeholders](/concepts/translations) here.
+Feel free to use color codes and [Triton placeholders](./translations.md) here.
 
 ### `commands`
 
@@ -69,7 +69,7 @@ BUNGEE:lobby:alert This will only run on lobby!
 ```
 
 ::: tip
-*(BungeeCord only)*
+_(BungeeCord only)_
 If a command you're using contains a `:` and you want it to be universal, do something like this:
 `PLAYER::give @a minecraft:dirt`
 :::
@@ -86,7 +86,7 @@ if you don't have it translated in the player's language yet.
 ### `twin-token`
 
 If you're using BungeeCord, you only need to place your TWIN token in the BungeeCord Triton's config.  
-To learn more about TWIN and how you can get the token, visit the [TWIN documentation page](/concepts/twin).
+To learn more about TWIN and how you can get the token, visit the [TWIN documentation page](./twin.md).
 
 ## Using BungeeCord
 

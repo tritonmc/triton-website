@@ -47,7 +47,7 @@ To add an item, simply click the `+` button and select either Text or Sign. You'
 
 ![TWIN empty text item](./twin2.png)
 
-I've already explained what each of those fields does in the [placeholders page](/concepts/placeholders), so check it out if you haven't already.
+I've already explained what each of those fields does in the [placeholders page](./placeholders.md), so check it out if you haven't already.
 
 To remove an item, simply click the `DELETE` button in the editing screen. If you've deleted an item by accident, simply click the undo button.
 

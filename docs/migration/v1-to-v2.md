@@ -45,5 +45,5 @@ As you can see, you can now set defaults for every file, so if you want one file
 
 ## Conclusion
 
-As you can see, there's almost no work included in upgrating from v1 to v2.
+As you can see, there's almost no work included in upgrading from v1 to v2.
 If you need help with any of the steps above, feel free to ask for help on our Discord!

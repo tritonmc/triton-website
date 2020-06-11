@@ -13,11 +13,11 @@ If you prefer a video tutorial of this guide, you can follow the official get st
 Before proceeding, it is important to note that there are 5 ways to translate messages using Triton.
 This guide will only talk about the first two:
 
-- [Triton Placeholders](/concepts/placeholders)
-- [Triton Advanced Placeholders](/concepts/placeholders.html#advanced-placeholders-using-variables)
-- [Triton Patterns](/concepts/patterns)
+- [Triton Placeholders](../concepts/placeholders.md)
+- [Triton Advanced Placeholders](../concepts/placeholders.md#advanced-placeholders-using-variables)
+- [Triton Patterns](../concepts/patterns.md)
 - PlaceholderAPI
-- [Triton API](/programatic-api/getting-started)
+- [Triton API](../programatic-api/getting-started.md)
 
 ### Triton Placeholders
 
@@ -41,7 +41,7 @@ As we can see, the `info.NoPermission` message is pretty simple to translate bec
 :::: tabs
 
 ::: tab TWIN
-Before proceeding, make sure you've [setup TWIN](/getting-started/initial-configuration#translations).
+Before proceeding, make sure you've [setup TWIN](../getting-started/initial-configuration.md#translations).
 
 If you haven't already, open TWIN by running `/twin` on console or in-game.
 

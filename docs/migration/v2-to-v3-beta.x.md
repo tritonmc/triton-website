@@ -20,7 +20,7 @@ in case something goes wrong during the migration!
 
 ## Downloading the new beta version
 
-Follow the instructions in the [installation guide](/getting-started/installation).
+Follow the instructions in the [installation guide](../getting-started/installation.md).
 
 ## Updating config files
 
@@ -44,7 +44,7 @@ with the changes highlighted.
 ### Storage options
 
 This is the most important change that you must perform before proceeding.
-Make sure to read the [initial configuration guide](/getting-started/initial-configuration#storage-type) if you're unsure how to configure it.
+Make sure to read the [initial configuration guide](../getting-started/initial-configuration.md#storage-type) if you're unsure how to configure it.
 
 ## Automatic Migration
 
@@ -104,6 +104,6 @@ please ask for help in our Discord server.
 
 Below are some resources that might be useful:
 
-- [Initial Configuration](/getting-started/initial-configuration)
-- [Commands and Permissions](/concepts/commands-permissions)
-- [Translating your first message](/guides/first-translation)
+- [Initial Configuration](../getting-started/initial-configuration.md)
+- [Commands and Permissions](../concepts/commands-permissions.md)
+- [Translating your first message](../guides/first-translation.md)

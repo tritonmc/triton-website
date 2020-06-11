@@ -66,9 +66,9 @@ If you fail to do that, translations might not be loaded correctly.
 Adding languages to the plugin is pretty straightforward.
 All you have to do is add/modify a section within the `languages` sections on `config.yml`.
 
-To get a flag code, follow the [guide on generating flag codes](/guides/flags).
+To get a flag code, follow the [guide on generating flag codes](../guides/flags.md).
 
-Details about every variable below can be found in the [config page](/concepts/config).
+Details about every variable below can be found in the [config page](../concepts/config.md).
 
 ```yaml
 # This will be ignored if 'bungeecord' is enabled.
@@ -115,7 +115,7 @@ you only need to configure the languages on the BungeeCord server.
 ## Translations
 
 The best way to add and edit translations easily is using TWIN.
-To use it, you must first [get a TWIN token](/concepts/twin).
+To use it, you must first [get a TWIN token](../concepts/twin.md).
 
 To get the token, you can either join our [Discord server](https://triton.rexcantor64.com/discord)
 or DM me (Rexcantor64) on Spigot.
@@ -131,4 +131,4 @@ twin-token: ''
 If you're using the BungeeCord network approach, you don't need to put the token in any Spigot server.
 :::
 
-After getting access to TWIN, follow the [translating your first message guide](/guides/first-translation).
+After getting access to TWIN, follow the [translating your first message guide](../guides/first-translation.md).

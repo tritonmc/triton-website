@@ -77,5 +77,5 @@ Congratulations! You've made it!
 
 Here's what to do next:
 
-- Learn more about [TWIN](/concepts/twin)
-- Learn more about the new [Commands and Permissions](/concepts/commands-permissions)
+- Learn more about [TWIN](../concepts/twin.md)
+- Learn more about the new [Commands and Permissions](../concepts/commands-permissions.md)
