@@ -5,10 +5,10 @@ Make sure you've [enrolled in the beta program](./beta-enrollment.md) before pro
 ## Downloading the plugin and dependencies
 
 To get started with the plugin, you first need to download the plugin.  
-For beta versions, the plugin will be hosted on [Polymart](https://triton.rexcantor64.com/polymart).  
+For beta versions, the plugin will be hosted on [Songoda](https://triton.rexcantor64.com/songoda).  
 Otherwise, download the plugin from your marketplace of choice.
 
-Aditionally, you might need to download some dependencies if you don't have them already:
+Additionally, you might need to download some dependencies if you don't have them already:
 
 - [ProtocolLib 4.5.0+](https://www.spigotmc.org/resources/protocollib.1997/)
 - [_(Optional)_ PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)
