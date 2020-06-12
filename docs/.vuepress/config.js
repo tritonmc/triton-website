@@ -109,6 +109,10 @@ module.exports = {
     ],
   ],
   themeConfig: {
+    yuu: {
+      defaultDarkTheme: true,
+      disableThemeIgnore: true,
+		},
     logo: 'https://cdn.rexcantor64.com/triton/assets/logo.png',
     nav: [
       {
