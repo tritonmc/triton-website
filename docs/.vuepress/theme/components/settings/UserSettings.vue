@@ -1,20 +1,13 @@
 <template>
-  <div v-if="showSettings" v-click-outside="hideMenu" class="user-settings">
+  <div v-if="showSettings" class="user-settings">
     <a class="settings-button" href="#" @click.prevent="onToggleClick">
       <MoonIcon v-if="darkTheme" class="settings-icon" />
       <LightbulbIcon v-else class="settings-icon" />
     </a>
-    <transition name="menu-transition" mode="out-in">
-      <div v-show="showMenu" class="user-settings-menu">
-        <ThemeOptions />
-      </div>
-    </transition>
   </div>
 </template>
 
 <script>
-import ClickOutside from 'vue-click-outside';
-import ThemeOptions from '@theme/components/settings/ThemeOptions.vue';
 import MoonIcon from '@theme/components/settings/MoonIcon.vue';
 import LightbulbIcon from '@theme/components/settings/LightbulbIcon.vue';
 import yuuConfig from '@theme/mixins/yuuConfig.js';
@@ -22,13 +15,9 @@ import darkThemeHandler from '@theme/mixins/darkThemeHandler.js';
 
 export default {
   name: 'UserSettings',
-  directives: {
-    'click-outside': ClickOutside,
-  },
   components: {
     MoonIcon,
     LightbulbIcon,
-    ThemeOptions,
   },
   mixins: [yuuConfig, darkThemeHandler],
   data() {
