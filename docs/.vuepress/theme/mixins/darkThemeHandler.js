@@ -23,7 +23,7 @@ export default {
     },
 
     toggleDarkTheme() {
-      if (!this.darkTheme) {
+      if (this.darkTheme) {
         document.body.classList.add('yuu-theme-dark');
         return localStorage.setItem('dark-theme', true);
       }

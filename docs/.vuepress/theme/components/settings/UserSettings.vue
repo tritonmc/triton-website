@@ -1,8 +1,8 @@
 <template>
   <div v-if="showSettings" class="user-settings">
     <a class="settings-button" href="#" @click.prevent="onToggleClick">
-      <MoonIcon v-if="darkTheme" class="settings-icon" />
-      <LightbulbIcon v-else class="settings-icon" />
+      <LightbulbIcon v-if="darkTheme" class="settings-icon" />
+      <MoonIcon v-else class="settings-icon" />
     </a>
   </div>
 </template>
