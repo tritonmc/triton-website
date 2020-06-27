@@ -8,7 +8,44 @@ This page is a guide on Triton's `config.yml` file.
 
 [[toc]]
 
+## Introduction
+
+This file is where you can configure how Triton will behave in that server.  
+Triton's default config file has comments all over the place, which do a great
+job at explaining what everything does. However, this page will explain some settings
+in more detail.
+
+You can check out the default Triton's [Spigot](https://triton.rexcantor64.com/github_config)
+and [BungeeCord](https://triton.rexcantor64.com/github_config_bungee) `config.yml`
+at any time on GitHub.
+
 ## Languages Section
+
+This section allows you to add/remove languages from Triton.  
+And you probably know by now, Triton is fully customizable, which means you can
+create as many languages as you'd like!
+
+Each language must have a language ID (the key of the YML section),
+a `flag` and a `display-name`.  
+Both `commands` and `minecraft-code` are optional.
+
+::: details Example Language
+
+```yaml
+languages:
+  en_GB:
+    flag: eapwplpnpmbzbj
+    display-name: '&aEnglish (UK)'
+```
+
+:::
+
+::: warning
+When using BungeeCord with a non-local storage option (read below),
+you'll need to make sure this section is _exactly_ the same across all servers.  
+The only exception to this rule is the `commands` field that is ignored on Spigot
+servers when using BungeeCord, regardless of storage options.
+:::
 
 ### `flag`
 
@@ -17,21 +54,36 @@ Follow the [generating a flag guide](../guides/flags.md) if you don't know what 
 
 ### `minecraft-code`
 
-This is a list of the corresponding locales in Minecraft.
+This is a list of the corresponding locales in Minecraft.  
 It is currently used to automatically set the player's language
-when they join for the first time, if there is a corresponding language.
+when they join for the first time, if there is a corresponding locale.  
+If there is not a corresponding locale, it falls back to the main language.  
 You can find the complete list of locales in the
 [Minecraft Wiki](https://minecraft.gamepedia.com/Language).
 
+All the values in the list are **case-insensitive**
+
+::: details Usage example
+
+```yaml
+languages:
+  en_GB:
+    flag: eapwplpnpmbzbj
+    display-name: '&aEnglish (UK)'
+    minecraft-code: [en_GB, en_US, en_AU, en_CA, en_NZ, en_PT, en_UD]
+```
+
+:::
+
 ### `display-name`
 
-This is fairly obvious.
+This is fairly obvious.  
 This is what will show up as the language name in chat and the selection GUI.
-Feel free to use color codes and [Triton placeholders](./translations.md) here.
+Feel free to use color codes and [Triton placeholders](./placeholders.md) here.
 
 ### `commands`
 
-There are 4 types of commands you can execute: `PLAYER`, `SERVER`, `BUNGEE`, `BUNGEE_PLAYER`; with the last two being available on BungeeCord only.
+There are 4 types of commands you can execute: `PLAYER`, `SERVER`, `BUNGEE`, `BUNGEE_PLAYER`; with the last two being _(obviously)_ available on BungeeCord only.
 
 - `PLAYER`: Runs the command as if the player typed it in the chat.
 - `SERVER`: Runs the command from console.
@@ -77,7 +129,8 @@ If a command you're using contains a `:` and you want it to be universal, do som
 ### `main-language`
 
 The Language ID (the key of the section) of the main language.  
-This will be the default language of a player when they join the server for the first time.
+This will be the default language of a player when they join the server for the first time,
+if no corresponding locale is found.
 This will also be used to get a message
 if you don't have it translated in the player's language yet.
 

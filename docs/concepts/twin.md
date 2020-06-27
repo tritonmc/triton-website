@@ -25,7 +25,7 @@ This is by far the fastest and most efficient way to get your TWIN token. Here i
 
 ::: tab PM on Spigot
 This is really straightforward, but it takes longer than the previous method. I might take a few hours or even days before I reply.  
-Just send me a PM on Spigot asking for your TWIN token.
+Just send me a [PM on Spigot](https://www.spigotmc.org/members/rexcantor64.165436/) asking for your TWIN token.
 :::
 
 ::::
