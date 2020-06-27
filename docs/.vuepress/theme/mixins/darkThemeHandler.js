@@ -8,7 +8,8 @@ export default {
   mounted() {
     if (this.yuu.disableDarkTheme !== true) {
       if (this.yuu.defaultDarkTheme === true && !localStorage.getItem('dark-theme')) {
-        localStorage.setItem('dark-theme', true);
+        const { matches } = window.matchMedia('(prefers-color-scheme: dark)');
+        localStorage.setItem('dark-theme', matches);
       }
 
       this.darkTheme = localStorage.getItem('dark-theme') === 'true';
