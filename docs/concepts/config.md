@@ -183,7 +183,7 @@ At the moment, languages aren't synced automatically yet when a non-local storag
 is in use.
 
 A more detailed guide on this section can be found in the
-[initial configuration guide](../getting-started/initial-configuration.md#storage-type).
+[storage page](./storage.md).
 
 ## Using BungeeCord
 

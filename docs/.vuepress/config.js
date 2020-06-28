@@ -112,7 +112,7 @@ module.exports = {
     yuu: {
       defaultDarkTheme: true,
       disableThemeIgnore: true,
-		},
+    },
     logo: 'https://cdn.rexcantor64.com/triton/assets/logo.png',
     nav: [
       {
@@ -155,6 +155,7 @@ module.exports = {
         title: '💡 Concepts',
         children: [
           '/concepts/config',
+          '/concepts/storage',
           '/concepts/commands-permissions',
           '/concepts/translations',
           '/concepts/placeholders',

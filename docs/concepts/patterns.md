@@ -4,6 +4,8 @@
 Triton v2.0.0 or later is required.
 :::
 
+[[toc]]
+
 This feature allows you to translate messages without using placeholders.
 
 Sometimes plugins don't allow you to edit their messages, which means Triton wouldn't work.

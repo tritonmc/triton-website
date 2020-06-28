@@ -3,6 +3,8 @@
 **TWIN** stands for **T**​riton **W**​eb **In**​terface.  
 Its goal is you help you manage your `translations` folder easily.
 
+[[toc]]
+
 ## Get your TWIN token
 
 To get started, you first need to get your TWIN token.

@@ -30,7 +30,7 @@ MongoDB support is in the works, but it's not supported at the moment.
 
 If you want to use local storage, you don't need the make any changes, it's good to go out of the box.
 
-However, if you want to use local storage, you have to change the storage type and fill in the information accordingly.
+However, if you want to use non-local storage, you have to change the storage type and fill in the information accordingly.
 
 ```yaml{7}
 # This section controls the storage location of player data and translations.
@@ -56,7 +56,7 @@ storage:
 The `server-name` variable is only loaded when using non-local storage types
 and it's used to filter translations that have entries in the `server` field.  
 If you're using a server template system, it might not be possible to set this.
-Leaving this empty will work correctly as long and you don't want to filter
+Leaving this empty will work correctly as long as you don't want to filter
 translations by server.
 :::
 
