@@ -53,7 +53,11 @@ storage:
 ```
 
 ::: tip
-The `server-name` variable is only used for non-local storage types.
+The `server-name` variable is only loaded when using non-local storage types
+and it's used to filter translations that have entries in the `server` field.  
+If you're using a server template system, it might not be possible to set this.
+Leaving this empty will work correctly as long and you don't want to filter
+translations by server.
 :::
 
 ::: warning
@@ -118,12 +122,10 @@ The best way to add and edit translations easily is using TWIN.
 To use it, you must first [get a TWIN token](../concepts/twin.md).
 
 To get the token, you can either join our [Discord server](https://triton.rexcantor64.com/discord)
-or DM me (Rexcantor64) on Spigot.
+or DM me ([Rexcantor64](https://www.spigotmc.org/members/rexcantor64.165436/)) on Spigot.
 
 ```yaml{4}
 # To access TWIN, you need a special token.
-# To get it, join our Discord server at https://triton.rexcantor64.com/discord or DM me on Spigot.
-# If you've enabled "bungeecord" above, there is no need to put your token here. You just need it on your BungeeCord config.
 twin-token: ''
 ```
 

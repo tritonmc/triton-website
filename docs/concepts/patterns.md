@@ -1,24 +1,30 @@
 # Patterns
 
-::: warning
-This page has been migrated from Triton's old docs and isn't finished yet.
-:::
-
-This feature allows you to translate messages without using placeholders.
-
 ::: tip REQUIREMENTS
 Triton v2.0.0 or later is required.
 :::
 
+This feature allows you to translate messages without using placeholders.
+
 Sometimes plugins don't allow you to edit their messages, which means Triton wouldn't work.
-For that reason, I've developed this feature that allows you to translate **any** message, even if the plugin doesn't allow you to change it.  
-This feature should work everywhere except signs and scoreboards.
+For that reason, a feature was developed that allows you to translate **any** message, even if the plugin doesn't allow you to change it.  
+This feature should work everywhere except scoreboards, which are not officially supported anymore.
 
 ## Using the feature
 
 To get started, you just need to add `patterns` to any existing Translatable Item.
 
 **Example:**
+
+:::: tabs
+
+::: tab TWIN
+To add a pattern to TWIN, use the _Patterns_ section available in Translatable Items.
+
+![TWIN example](./patterns-1.png)
+:::
+
+::: tab JSON
 
 ```json
 {
@@ -35,6 +41,9 @@ To get started, you just need to add `patterns` to any existing Translatable Ite
 },
 ```
 
+:::
+::::
+
 ::: tip
 Depending on the message and plugin, you may need to try both `&` and `§` to get the color code right.
 :::
@@ -43,11 +52,31 @@ The example above will replace any `&aThis is something that needs &bto &dbe &1 
 Notice that `)` in the latter needs to be escaped, since this is regex.
 To make sure you're using valid regex, you can use a tool like [RegExr](https://regexr.com).
 
+::: tip
+To avoid people typing matching text in the chat, you can (and should) use the beginning (`^`)
+and end (`$`) anchors in your patterns.
+:::
+
+::: danger
+Don't use patterns unless you really have to. Each pattern is checked against every message,
+which can hit your server performance severely. Use Triton placeholders when possible.
+:::
+
 ## Using variables
 
 You can use regex groups to select variables and use them in the translated message.
 
 **Example:**
+
+:::: tabs
+
+::: tab TWIN
+
+![TWIN example with variables](./patterns-2.png)
+
+:::
+
+::: tab JSON
 
 ```json
 {
@@ -63,6 +92,9 @@ You can use regex groups to select variables and use them in the translated mess
   ]
 }
 ```
+
+:::
+::::
 
 ## Other information
 
