@@ -109,6 +109,10 @@ module.exports = {
     ],
   ],
   themeConfig: {
+    algolia: {
+      apiKey: 'cbcf5b27fa8f0b9452230b9a6aea2f12',
+      indexName: 'tritonmc_triton',
+    },
     yuu: {
       defaultDarkTheme: true,
       disableThemeIgnore: true,
