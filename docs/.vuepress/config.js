@@ -124,10 +124,6 @@ module.exports = {
         link: 'https://triton.rexcantor64.com/spigot',
       },
       {
-        text: 'Songoda',
-        link: 'https://triton.rexcantor64.com/songoda',
-      },
-      {
         text: 'Polymart',
         link: 'https://triton.rexcantor64.com/polymart',
       },

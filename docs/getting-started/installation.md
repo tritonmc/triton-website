@@ -6,7 +6,7 @@ make sure you've [enrolled in the beta program](./beta-enrollment.md) before pro
 ## Downloading the plugin and dependencies
 
 To get started with the plugin, you first need to download the plugin.  
-For beta versions, the plugin will be hosted on [Songoda](https://triton.rexcantor64.com/songoda).  
+For beta versions, the plugin will be hosted on [Polymart](https://triton.rexcantor64.com/polymart).  
 Otherwise, download the plugin from your marketplace of choice.
 
 Additionally, you might need to download some dependencies if you don't have them already:
