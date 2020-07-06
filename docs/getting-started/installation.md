@@ -14,7 +14,7 @@ Additionally, you might need to download some dependencies if you don't have the
 - [ProtocolLib 4.5.0+](https://www.spigotmc.org/resources/protocollib.1997/)
 - [_(Optional)_ PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)
 
-Once you've downloaded the plugin, unzip the file.
+Once you've downloaded the plugin, place the  `.jar` in the `plugins` folder of all your servers (Spigot, BungeeCord, etc).
 
 ::: warning
 Using any other server software than Spigot or BungeeCord (e.g. Paper, Waterfall, etc) is not officially supported.  
