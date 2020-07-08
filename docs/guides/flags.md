@@ -1,8 +1,7 @@
 # Generate flag codes
 
 For each language you must set a flag code that'll represent the banner
-in the language selection menu.
-
+in the language selection menu.  
 To do that, you must either create your own flag or use one of the premade flags below.
 
 ## Create your own flag
@@ -10,12 +9,12 @@ To do that, you must either create your own flag or use one of the premade flags
 Start by going to the [Miners Need Cool Shoes' Banner Generator](https://www.needcoolshoes.com/banner).  
 When you're there, create your flag.
 If you're not sure how you can make your country flag,
-just search around the internet and you'll probably find someone that did it already.
+just search around the internet and you'll probably find someone that did it already.  
 ![Flag generator](./flags1.png)
 
 When you're done, get the flag code.
 It is appended to the URL when you change the flag.
-In this case, the flag code is `eapwplpnpmbzbj` (UK flag)
+In this case, the flag code is `eapwplpnpmbzbj` (UK flag).  
 ![Flag code in link](./flags2.png)
 
 ## List of premade flags
