@@ -34,6 +34,7 @@ All of these flags are rotated 90 degrees to accommodate a landscape layout.
 - India: `paetetcscsoyoy`
 - Italy: `pacEbf` (dark green) | `pakEbf` (light green)
 - Portugal: `bacLlt`
+- Romania: `laefbE`
 - Russia: `eabspy`
 - Spain: `padqlElLbybs`
 - Switzerland: `bapwplbcbEbf`
