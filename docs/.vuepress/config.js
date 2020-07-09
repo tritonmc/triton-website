@@ -1,8 +1,7 @@
 module.exports = {
   title: 'Triton Documentation',
   description: 'Translate Your Server - Spigot Plugin',
-  base: '/documentation/',
-  dest: './static/documentation',
+  dest: './public',
   plugins: [
     '@vuepress/medium-zoom',
     'vuepress-plugin-element-tabs',
