@@ -1,4 +1,4 @@
-# Migrating from Triton v2 to v3-beta.x
+# Migrating from Triton v2 to v3
 
 ::: warning
 Before proceeding, make sure to backup your `Triton` folder on all servers
@@ -9,16 +9,23 @@ in case something goes wrong during the migration!
 
 ## Changelog
 
+Below are the changes that require your attention:
+
 - MySQL support for translations **(:collision: Breaking Change)**
-- Better debugging tools
+- Better debugging tools (`debug` has been replaced with `log-level`)
 - Removed `universal` field for translations since it was redundant
 - Add feature that prevents players from typing placeholders in the chat
   (enabled by default)
 - `players.yml` has been renamed to `players.json` and it's now not used
-  when using a non-local storage type.
+  when using a non-local storage type
 - `cache.json` has changed syntax
+- `messages.yml` content has changed and it now has a blueish theme
+- `/triton setlanguage` for others has changed format (arguments have swapped)
+- Removed scoreboard translation
 
-## Downloading the new beta version
+All other changes in this version can be found on Spigot or Polymart.
+
+## Downloading the new version
 
 Follow the instructions in the [installation guide](../getting-started/installation.md).
 
@@ -31,13 +38,17 @@ with the changes highlighted.
 
 ::: details Spigot config.yml
 
-<<< @/docs/migration/v3_b1_config.yml{64-69,71-87,193-195}
+Alternatively, see the [diff on GitHub](https://github.com/tritonmc/Triton/commit/8c54291111a4693c07c8373f3945405c50c33fa2#diff-0f1be8eec416e71c28b41efb0544df26).
+
+<<< @/docs/migration/v3_config.yml{65-70,72-88,183-185}
 
 :::
 
 ::: details Bungee config.yml
 
-<<< @/docs/migration/v3_b1_bungee_config.yml{61-66,68-81,140-142}
+Alternatively, see the [diff on GitHub](https://github.com/tritonmc/Triton/commit/8c54291111a4693c07c8373f3945405c50c33fa2#diff-c86926b4793226abff7207c78d20c992).
+
+<<< @/docs/migration/v3_bungee_config.yml{61-66,68-81}
 
 :::
 
@@ -45,6 +56,9 @@ with the changes highlighted.
 
 This is the most important change that you must perform before proceeding.
 Make sure to read the [initial configuration guide](../getting-started/initial-configuration.md#storage-type) if you're unsure how to configure it.
+
+The `database` section has been renamed to `storage`.
+The guide linked above will help you go through the configuration.
 
 ## Automatic Migration
 
@@ -94,10 +108,31 @@ When executed, all `.json` files in the `translations` folder are deleted and re
 with the translations from the database.
 :::
 
+## Changes to `messages.yml`
+
+The `messages.yml` file has updated translations and a new blueish color theme.
+You can find the [diff on GitHub](https://github.com/tritonmc/Triton/commit/8c54291111a4693c07c8373f3945405c50c33fa2#diff-b7bfb7063d6b6ccbda02c1e078c91e72).
+
+## Changes to `/triton setlanguage`
+
+This command previously was used as `/triton setlanguage [player] <language>`.  
+Now, as it should have been from the beginning, the new format is `/triton setlanguage <language> [player]`.
+
+If you're using this command on menus or something similar, please swap the arguments.
+
+## Removal of scoreboard translation
+
+Scoreboard translation using Triton placeholders was deprecated since v2.5.1.  
+It has now been removed from the plugin completely.
+
+Reasons for removal include poor and laggy implementation and visual glitches.
+
+As an alternative (and recommended), use [PlaceholderAPI](../concepts/placeholderapi.md) from now on.
+
 ## After Migration :tada:
 
 Congrats, you've made it!  
-You should now be running Triton v3.0.0-beta.1!
+You should now be running Triton v3.0.0!
 
 If you've encountered any issue during the migration process,
 please ask for help in our Discord server.

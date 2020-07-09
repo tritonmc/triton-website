@@ -144,11 +144,7 @@ module.exports = {
       {
         collapsable: false,
         title: '🚀 Getting Started',
-        children: [
-          '/getting-started/beta-enrollment',
-          '/getting-started/installation',
-          '/getting-started/initial-configuration',
-        ],
+        children: ['/getting-started/installation', '/getting-started/initial-configuration'],
       },
       {
         collapsable: true,
@@ -178,7 +174,7 @@ module.exports = {
       {
         collapsable: true,
         title: '📦 Migration Guides',
-        children: ['/migration/v2-to-v3-beta.x', '/migration/v1-to-v2', '/migration/v0-to-v1'],
+        children: ['/migration/v2-to-v3', '/migration/v1-to-v2', '/migration/v0-to-v1'],
       },
     ],
   },
