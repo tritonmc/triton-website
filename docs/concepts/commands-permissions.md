@@ -8,7 +8,7 @@ Here is a brief summary of the plugin's commands and permissions:
 | /triton help                                       | triton.help                                   |
 | /triton getflag \<language>                        | triton.getflag                                |
 | /triton reload [all/server/bungee]                 | triton.reload                                 |
-| /triton setlanguage [player] \<language>           | triton.setlanguage, triton.setlanguage.others |
+| /triton setlanguage \<language> [player]           | triton.setlanguage, triton.setlanguage.others |
 | /triton sign \<set/remove> \<group key (set only)> | triton.sign                                   |
 | /twin database \<upload/download>                  | triton.database                               |
 | /twin                                              | twin.upload                                   |
@@ -60,7 +60,7 @@ Reloads the plugin.
 
 When using this command through console, it can only reload the current server/proxy.
 
-### /triton setlanguage [player] \<language>
+### /triton setlanguage \<language> [player]
 
 _(only available in-game when used for self)_  
 Permission: `triton.setlanguage`
@@ -69,8 +69,8 @@ Sets the language of self or another player.
 
 #### Arguments
 
-`player` _(optional)_: Specify the target player. Requires the `triton.setlanguage.others` permission.  
-`language`: The ID of the target language.
+`language`: The ID of the target language.  
+`player` _(optional)_: Specify the target player. Requires the `triton.setlanguage.others` permission.
 
 ### /triton sign \<mode> [group id]
 
