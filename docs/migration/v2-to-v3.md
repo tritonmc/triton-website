@@ -22,6 +22,7 @@ Below are the changes that require your attention:
 - `messages.yml` content has changed and it now has a blueish theme
 - `/triton setlanguage` for others has changed format (arguments have swapped)
 - Removed scoreboard translation
+- Removed all `multilanguageplugin.*` permissions
 
 All other changes in this version can be found on Spigot or Polymart.
 
