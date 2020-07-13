@@ -11,6 +11,13 @@ module.exports = {
         ga: 'UA-123906138-2',
       },
     ],
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: true,
+      },
+    ],
   ],
   head: [
     [
@@ -63,7 +70,6 @@ module.exports = {
         content: 'diogotc2002',
       },
     ],
-
     [
       'meta',
       {
@@ -106,6 +112,8 @@ module.exports = {
         content: 'https://cdn.rexcantor64.com/triton/assets/banner.png',
       },
     ],
+    ['meta', { name: 'theme-color', content: '#008ff8' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
   ],
   themeConfig: {
     algolia: {
