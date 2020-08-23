@@ -139,6 +139,19 @@ if you don't have it translated in the player's language yet.
 If you're using BungeeCord, you only need to place your TWIN token in the BungeeCord Triton's config.  
 To learn more about TWIN and how you can get the token, visit the [TWIN documentation page](./twin.md).
 
+### `open-selector-command-override`
+
+_Spigot Only_  
+_Default: null_  
+If you want to open a custom menu (or even just execute a custom command) instead of opening Triton's default
+language selector menu, put the command here, without the first slash (/).  
+Instead of opening the language menu, Triton will execute this command as the player.
+
+Example: `open-selector-command-override: "dm open language"`
+
+Set to `null` or an empty string to revert to default behaviour.  
+Since this is Spigot only, this can be set on a per-server basis.
+
 ### `run-language-commands-on-join`
 
 _Default: false_  
