@@ -183,6 +183,29 @@ Example:
 :::
 ::::
 
+#### Using JSON chat components
+
+::: tip REQUIREMENTS
+This feature requires Triton v3.1.0 or newer.  
+Understanding of the [Minecraft JSON Text Format](https://minecraft.gamepedia.com/Raw_JSON_text_format) is also required.
+:::
+
+Since Minecraft 1.7, the game has supported rich text through JSON chat components.
+This allows you to add custom click and hover actions as well as natively translated text using Minecraft's own locales.
+
+Because of this, it might be useful to output JSON text in some situations.
+To to that, simply prepend `[triton_json]` to the translation text.
+You can also place variables in the JSON text, but keep in mind they aren't escaped.
+
+Example:
+
+```
+[triton_json]{"translate":"gameMode.changed","color":"gold","bold":true,"with":[{"text":"%1"}]}
+```
+
+Right now, there is no TWIN support for this feature, so you have to write the above in the respective language.
+In the future, a button to switch between text and JSON modes will be added, which will insert `[triton_json]` automatically.
+
 ### Sign Translations
 
 Also known as Sign Groups, these can be used to translate signs.
