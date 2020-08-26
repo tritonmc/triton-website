@@ -113,3 +113,33 @@ You must first change the settings on config and then run `/triton database uplo
 
 To achieve this, you must first migrate to local storage
 and then back to non-local storage.
+
+## Advanced options
+
+Triton uses [HikariCP](https://github.com/brettwooldridge/HikariCP) for handling MySQL connections,
+which means you can customize the connection pool yourself.
+
+Advanced options are available under `storage.mysql-pool-advanced`, for both BungeeCord and Spigot.
+
+```yaml
+mysql-pool-advanced:
+  # Sets the maximum size of the MySQL connection pool.
+  # https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing
+  maximum-pool-size: 10
+  # Sets the minimum number of idle connections that the pool will try to maintain.
+  minimum-idle: 10
+  # This setting controls the maximum lifetime of a connection in the pool in milliseconds.
+  maximum-lifetime: 1800000 # 30 minutes
+  # This setting controls the maximum number of milliseconds that the plugin will wait for a
+  # connection from the pool, before timing out.
+  connection-timeout: 5000 # 5 seconds
+
+  # This setting allows you to define extra properties for connections.
+  properties:
+  #  useUnicode: true
+  #  characterEncoding: utf8
+  #  useSSL: false
+  #  verifyServerCertificate: false
+```
+
+The available fields in the `properties` sections can be found on HikariCP's GitHub page.

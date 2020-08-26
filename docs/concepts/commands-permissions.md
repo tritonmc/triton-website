@@ -2,17 +2,17 @@
 
 Here is a brief summary of the plugin's commands and permissions:
 
-| Command                                            | Permissions                                   |
-| -------------------------------------------------- | --------------------------------------------- |
-| /triton, /triton openselector                      | triton.openselector                           |
-| /triton help                                       | triton.help                                   |
-| /triton getflag \<language>                        | triton.getflag                                |
-| /triton reload [all/server/bungee]                 | triton.reload                                 |
-| /triton setlanguage \<language> [player]           | triton.setlanguage, triton.setlanguage.others |
-| /triton sign \<set/remove> \<group key (set only)> | triton.sign                                   |
-| /twin database \<upload/download>                  | triton.database                               |
-| /twin                                              | twin.upload                                   |
-| /twin \<code>                                      | twin.download                                 |
+| Command                                                 | Permissions                                   |
+| ------------------------------------------------------- | --------------------------------------------- |
+| /triton, /triton openselector                           | triton.openselector                           |
+| /triton help                                            | triton.help                                   |
+| /triton getflag \<language>                             | triton.getflag                                |
+| /triton reload \[all/server/bungee]                     | triton.reload                                 |
+| /triton setlanguage \<language> \[player]               | triton.setlanguage, triton.setlanguage.others |
+| /triton sign \<set/remove> \<group key (set only)>      | triton.sign                                   |
+| /twin database \<upload/download>                       | triton.database                               |
+| /twin \[upload] \[collection filter] \[language filter] | twin.upload                                   |
+| /twin \<code>                                           | twin.download                                 |
 
 ## Commands
 
@@ -103,11 +103,18 @@ to the `translation` folder for easier editing and migration purposes.
 - `upload`/`u`: overwrite all the translations in the database with the ones in the `translations` folder
 - `download`/`d`: overwrite all the translation in the `translations` folder with the ones in the database
 
-### /twin
+### /twin upload \[collection filter] \[language filter]
 
-Permission: `twin.upload`
+Permission: `twin.upload`  
+Alias: `/twin` (only when omitting filters)
 
-Uploads the current `translations` folder to TWIN.
+Uploads the current `translations` folder to TWIN.  
+`/twin` is an alias of `/twin upload`, which means `/twin` is the same as `/twin upload * *`.
+
+#### Arguments
+
+`collection filter` _(optional)_: List of collections to upload, separated by colons (`:`). Use `*` to upload all collections.
+`language filter` _(optional)_: List of languages to upload, separated by colons (`:`). Use `*` to upload all languages.
 
 ### /twin \<code>
 
