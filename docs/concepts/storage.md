@@ -87,11 +87,11 @@ and all database content on upload.
 This command allows you to copy your database content to a JSON format in the
 `translations` folder.  
 To do this, run `/triton database download` from the BungeeCord console
-(or Spigot console if you're not running a network) or in-game.
-The fields will be downloaded to BungeeCord if you're running a network.
+(or Spigot console if you're not running a server network) or in-game.
+The files will be downloaded to BungeeCord (or equivalent proxy) if you're running a server network.
 Otherwise, they'll be placed in your Spigot server.
 
-After downloading the content from the database, you can edit was you wish.
+After downloading the content from the database, you can edit as you wish.
 
 Once that's done, you can upload your changes back to the database
 using `/triton database upload`.
