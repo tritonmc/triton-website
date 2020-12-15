@@ -36,6 +36,7 @@ All of these flags are rotated 90 degrees to accommodate a landscape layout.
 - Portugal: `bacLlt`
 - Romania: `laefbE`
 - Russia: `eabspy`
+- Slovenia `paeepqpcpfbMel`
 - Spain: `padqlElLbybs`
 - Switzerland: `bapwplbcbEbf`
 - United Kingdom: `eapwplpnpmbzbj`
