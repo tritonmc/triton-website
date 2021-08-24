@@ -206,6 +206,26 @@ Example:
 Right now, there is no TWIN support for this feature, so you have to write the above in the respective language.
 In the future, a button to switch between text and JSON modes will be added, which will insert `[triton_json]` automatically.
 
+#### Using Kyori's MiniMessage
+
+::: tip REQUIREMENTS
+This feature requires Triton v3.5.0 or newer.  
+Understanding of the [MiniMessage Format](https://docs.adventure.kyori.net/minimessage.html#format) is also required.
+:::
+
+Kyori's MiniMessage library allows to easily add click and hover actions as well as HEX colors codes (along with legacy colors).
+This makes it much easier to use HEX Colors, which would be complicated using md5's chat library.
+
+Because of this, it might be useful to output parsed MiniMessages in some situations.
+To to that, simply prepend `[minimsg]` to the translation text.
+You can also place variables in the MiniMessage text.
+
+Example:
+
+```
+[minimsg]<#006fff>PVP: <orange>%1</orange> has been killed by <#6100e9>%2
+```
+
 ### Sign Translations
 
 Also known as Sign Groups, these can be used to translate signs.
