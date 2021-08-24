@@ -108,6 +108,10 @@ module.exports = {
     ],
     ['meta', { name: 'theme-color', content: '#008ff8' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
+    [
+      'meta',
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+    ],
   ],
   themeConfig: {
     algolia: {
