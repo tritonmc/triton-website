@@ -6,12 +6,6 @@ module.exports = {
     '@vuepress/medium-zoom',
     'vuepress-plugin-element-tabs',
     [
-      '@vuepress/google-analytics',
-      {
-        ga: 'UA-123906138-2',
-      },
-    ],
-    [
       '@vuepress/pwa',
       {
         serviceWorker: true,
