@@ -15,6 +15,14 @@ With that in mind, let's get started.
 
 ---
 
+::: warning VELOCITY
+
+If you're using Velocity instead of BungeeCord, you can follow the same configuration that's described for BungeeCord.  
+However, there are some limitations with Velocity that you should be aware, so take a look at
+the [Velocity Guide](/guides/velocity.md) before continuing!
+
+:::
+
 Before proceeding, if you've chosen the **BungeeCord network** approach,
 you **must** enable `bungeecord` on Triton's `config.yml` for every
 Spigot server.

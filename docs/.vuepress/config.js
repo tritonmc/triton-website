@@ -165,7 +165,12 @@ module.exports = {
       {
         collapsable: true,
         title: '📚 Guides',
-        children: ['/guides/first-translation', '/guides/bulk-translate', '/guides/flags'],
+        children: [
+          '/guides/first-translation',
+          '/guides/bulk-translate',
+          '/guides/flags',
+          '/guides/velocity',
+        ],
       },
       {
         collapsable: true,
