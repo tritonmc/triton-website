@@ -209,7 +209,7 @@ In the future, a button to switch between text and JSON modes will be added, whi
 #### Using Kyori's MiniMessage
 
 ::: tip REQUIREMENTS
-This feature requires Triton v3.5.0 or newer.  
+This feature requires Triton v3.5.1 or newer and PaperMC (or a fork).  
 Understanding of the [MiniMessage Format](https://docs.adventure.kyori.net/minimessage.html#format) is also required.
 :::
 
