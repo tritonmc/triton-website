@@ -29,3 +29,10 @@ While variables are not directly supported, you can use multiple placeholders to
 **Example:**
 
 `%triton_placeholder1% some argument %triton_placeholder2%`
+
+## Relative placeholders
+
+Plugins such as DeluxeChat support relative placeholders, which involve two players (e.g. the one who sends the message, and the one who sees the message).  
+You might want to use PlaceholderAPI with Triton to show the messages in the receiver's language.
+
+For that, just use `%rel_triton_translation.key%`, where `translation.key` is the key of the translation you want (i.e. the one you set on TWIN).
