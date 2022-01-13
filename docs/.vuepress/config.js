@@ -115,7 +115,8 @@ module.exports = {
   ],
   themeConfig: {
     algolia: {
-      apiKey: 'cbcf5b27fa8f0b9452230b9a6aea2f12',
+      appId: '05H2PEO6IV',
+      apiKey: '546bcea7b4670b37f2b7d4dd0b47d0cb',
       indexName: 'tritonmc_triton',
     },
     yuu: {
