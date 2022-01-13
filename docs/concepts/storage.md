@@ -60,6 +60,12 @@ If you're using the BungeeCord network approach, you must use the same storage c
 If you fail to do that, translations might not be loaded correctly.
 :::
 
+::: danger
+If you're using MySQL storage with BungeeCord (or a proxy), you **MUST** have the same configuration for `languages` on Triton's config on
+all servers and on the proxy.
+If you don't do this, translations will **not** be synced correctly between servers.
+:::
+
 All fields in the configuration above should be pretty self explanatory.
 
 ## Managing translations while using non-local storage
