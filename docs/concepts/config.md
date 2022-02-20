@@ -77,6 +77,55 @@ This is fairly obvious.
 This is what will show up as the language name in chat and the selection GUI.
 Feel free to use color codes and [Triton placeholders](./placeholders.md) here.
 
+### `fallback-languages`
+
+_Added in 3.7.0_
+
+Sometimes you might have missing translations on all languages or just don't want to
+fallback directly to the main language (e.g. make European Portuguese fallback to Brazillian portuguese first and then English).  
+This is a list of languages to try if the translation is not available in this language.
+
+Despite the value of this field, Triton will always attempt to fetch the translation from the default language
+after trying all the languages in the config.
+
+:::details Example
+
+Consider the following configuration (some fields are removed for simplification):
+
+```yaml
+languages:
+  en_GB:
+    display-name: '&aEnglish (UK)'
+    fallback-languages: []
+  pt_PT:
+    display-name: '&aPortuguese (Portugal)'
+    fallback-languages:
+      - 'pt_BR'
+      - 'es_ES'
+  pt_BR:
+    display-name: '&aPortuguese (Brazil)'
+    fallback-languages:
+      - 'pt_PT'
+      - 'es_ES'
+  es_ES:
+    display-name: '&aSpanish (Spain)'
+    fallback-langauges:
+      - 'pt_PT'
+      - 'pt_BR'
+
+main-language: en_GB
+```
+
+If a player has their language set to `pt_PT` (Portuguese Portugal), Triton will attempt to get the translations
+from the following languages, in order, until that language has the requested translation:
+
+- Portuguese (Portugal) - `pt_PT`
+- Portuguese (Brazil) - `pt_BR`
+- Spanish (Spain) - `es_ES`
+- English (UK) - `en_GB`
+
+:::
+
 ### `commands`
 
 There are 4 types of commands you can execute: `PLAYER`, `SERVER`, `BUNGEE`, `BUNGEE_PLAYER`; with the last two being _(obviously)_ available on BungeeCord only.
