@@ -15,10 +15,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@vuepress/plugin-medium-zoom": "^1.9.5",
-    "@vuepress/plugin-pwa": "^1.9.5",
-    "eslint": "^8.6.0",
-    "vuepress": "^1.9.5",
+    "@vuepress/plugin-medium-zoom": "^1.9.7",
+    "@vuepress/plugin-pwa": "^1.9.7",
+    "eslint": "^8.9.0",
+    "vuepress": "^1.9.7",
     "vuepress-plugin-element-tabs": "^0.2.8"
   }
 }
