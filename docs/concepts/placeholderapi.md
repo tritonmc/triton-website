@@ -36,3 +36,8 @@ Plugins such as DeluxeChat support relative placeholders, which involve two play
 You might want to use PlaceholderAPI with Triton to show the messages in the receiver's language.
 
 For that, just use `%rel_triton_translation.key%`, where `translation.key` is the key of the translation you want (i.e. the one you set on TWIN).
+
+## Using in translations
+
+Looking to use PlaceholderAPI inside translations?
+Check out the [Translations](./translations.md#using-placeholderapi) documentation.

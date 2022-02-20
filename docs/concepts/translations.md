@@ -226,6 +226,20 @@ Example:
 [minimsg]<#006fff>PVP: <orange>%1</orange> has been killed by <#6100e9>%2
 ```
 
+#### Using PlaceholderAPI
+
+::: tip REQUIREMENTS
+This feature requires Triton v3.7.0 or newer.
+:::
+
+You can simply use any PlaceholderAPI placeholder inside the translation and it will be replaced accordingly.
+
+Example:
+
+```
+Welcome, %player_name%!
+```
+
 ### Sign Translations
 
 Also known as Sign Groups, these can be used to translate signs.
