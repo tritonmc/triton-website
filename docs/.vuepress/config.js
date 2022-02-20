@@ -179,6 +179,11 @@ module.exports = {
       },
       {
         collapsable: true,
+        title: '🧪 Experimental Features',
+        children: ['/experimental-features/async-protocollib'],
+      },
+      {
+        collapsable: true,
         title: '🔌 Programatic API',
         children: ['/programatic-api/getting-started'],
       },
