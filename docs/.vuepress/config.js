@@ -150,7 +150,11 @@ module.exports = {
       {
         collapsable: false,
         title: '🚀 Getting Started',
-        children: ['/getting-started/installation', '/getting-started/initial-configuration'],
+        children: [
+          '/getting-started/installation',
+          '/getting-started/initial-configuration',
+          '/faq/',
+        ],
       },
       {
         collapsable: true,
