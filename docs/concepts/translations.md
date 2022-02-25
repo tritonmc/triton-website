@@ -223,7 +223,7 @@ You can also place variables in the MiniMessage text.
 Example:
 
 ```
-[minimsg]<#006fff>PVP: <orange>%1</orange> has been killed by <#6100e9>%2
+[minimsg]<#006fff>PVP: <gold>%1</gold> has been killed by <#6100e9>%2
 ```
 
 #### Using PlaceholderAPI
