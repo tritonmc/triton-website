@@ -33,9 +33,11 @@ All of these flags are rotated 90 degrees to accommodate a landscape layout.
 - Germany: `baayls`
 - India: `paetetcscsoyoy`
 - Italy: `pacEbf` (dark green) | `pakEbf` (light green)
+- Israel `paeyespoet`
 - Japan: `pabt`
 - Mongolia: `eabEbflG`
 - Philippines: `pallpvpcexbIed`
+- Palestine: `paaycsbF`
 - Portugal: `bacLlt`
 - Romania: `laefbE`
 - Russia: `eabspy`
@@ -46,7 +48,9 @@ All of these flags are rotated 90 degrees to accommodate a landscape layout.
 - Taiwan: `papmeceGeHeLelevbLbwbHbH`
 - United Kingdom: `eapwplpnpmbzbj`
 - United States of America (USA): `bapBeC`
+- Ukraine: `paeHlM` | Ukraine & Heart: `paeHlMpqeHlybvbtpF`
 - Vietnam: `labwlobElvbgbf`
+- Venezuela: `eapobsly`
 
 If you'd like to add a flag to this list,
 click the `Improve this page` button below.
