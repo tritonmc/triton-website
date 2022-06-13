@@ -10,7 +10,9 @@ Here is a brief summary of the plugin's commands and permissions:
 | /triton reload \[all/server/bungee]                     | triton.reload                                 |
 | /triton setlanguage \<language> \[player]               | triton.setlanguage, triton.setlanguage.others |
 | /triton sign \<set/remove> \<group key (set only)>      | triton.sign                                   |
-| /twin database \<upload/download>                       | triton.database                               |
+| /triton info                                            | triton.info                                   |
+| /triton loglevel \[number]                              | triton.loglevel (console only)                |
+| /triton database \<upload/download>                     | triton.database                               |
 | /twin \[upload] \[collection filter] \[language filter] | twin.upload                                   |
 | /twin \<code>                                           | twin.download                                 |
 
@@ -22,7 +24,7 @@ the following commands: `/mlp`, `/ml`, `/multilanguage`, `/multilanguageplugin`.
 
 ### /triton, /triton openselector
 
-_(only available-ingame)_
+_(only available-ingame)_  
 Permission: `triton.openselector`
 
 Opens up a GUI that allows you to select a language.
@@ -87,6 +89,29 @@ Add/remove a sign from a sign group. The target sign is the sign the player is l
 - `remove` Remove the sign from its current group (if any).
 
 `group id` _(only if `mode` is `set`)_: The sign group to assign the sign to.
+
+### /triton info
+
+Permission: `triton.info`
+
+Shows information about Triton and how it is setup.  
+If [log level](/concepts/config.md#log-level) is 2 or more, the loaded config is also printed to the console.
+
+### /triton loglevel [number]
+
+_(console only)_  
+Permission: `triton.loglevel`
+
+When used without argument, it prints the current [log level](/concepts/config.md#log-level).
+When an argument is provided, the log level is set to that number until the plugin is reloaded
+or this command is executed again.
+
+This only works on the console since otherwise it would be ambiguous which server
+we were targeting (e.g. the proxy or the actual server).
+
+#### Arguments
+
+`number` _(optional)_: The new log level. Must be a number between 0 and 2.
 
 ### /triton database \<mode>
 
@@ -159,6 +184,16 @@ Default: op
 ### triton.sign
 
 Allows access to `/triton sign <set/remove> <group key (set only)>`.  
+Default: op
+
+### triton.info
+
+Allows access to `/triton info`.  
+Default: everyone
+
+### triton.loglevel
+
+Allows access to `/triton loglevel [number]`.  
 Default: op
 
 ### triton.database

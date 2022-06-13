@@ -233,10 +233,9 @@ This option changes how verbose Triton's log messages will be.
 
 Available log levels:
 
-- **0:** Only errors and startup messages are logged to the console.
-- **1:** Also outputs details about config initialization and other relevant information (translation count, startup time, stack traces etc).
-- **2:** Also outputs information related to reading/writing files, as well as communication with BungeeCord and a database.
-- **3:** Logs EVERYTHING. Only recommended for debugging purposes. When enabled, every translation job will be logged to the console.
+- **0:** Corresponds to INFO. Logs useful information, such as successfully loading configurations.
+- **1:** Corresponds to DEBUG. Logs more detailed information about each event.
+- **2:** Corresponds to TRACE. Logs every action made by the plugin. Useful for reporting issues, but will print a lot of information.
 
 ### `storage`
 
