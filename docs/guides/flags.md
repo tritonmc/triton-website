@@ -49,7 +49,7 @@ All of these flags are rotated 90 degrees to accommodate a landscape layout.
 - Taiwan: `papmeceGeHeLelevbLbwbHbH`
 - United Kingdom: `eapwplpnpmbzbj`
 - United States of America (USA): `bapBeC`
-- Ukraine: `paeqlL` | Ukraine & Heart: `paeHlMpqeHlybvbtpF`
+- Ukraine: `paeqlL` | Ukraine & Heart: `paeqlLbtbveFeF`
 - Vietnam: `labwlobElvbgbf`
 - Venezuela: `eapobsly`
 
