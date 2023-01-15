@@ -76,7 +76,7 @@ delete or move multiple items to another collection.
 
 You can use this to export or import all (or selected) translation items from/to a specific
 language from/to a `.properties` file.  
-This can be used with tools like [Crowdin](httphttps://crowdin.com/) to easily translate your
+This can be used with tools like [Crowdin](https://crowdin.com/) to easily translate your
 server.
 
 ## Dark mode
