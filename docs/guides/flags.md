@@ -31,6 +31,7 @@ All of these flags are rotated 90 degrees to accommodate a landscape layout.
 - Finland: `eapbpdpqelel`
 - France: `paeEbf`
 - Germany: `baayls`
+- Hungary: `pabycs`
 - India: `paetetcscsoyoy`
 - Italy: `pacEbf` (dark green) | `pakEbf` (light green)
 - Israel `paeyespoet`
