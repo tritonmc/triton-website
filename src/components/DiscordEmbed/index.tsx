@@ -4,7 +4,7 @@ type DiscordEmbedProps = {
   widgetId: string;
 };
 
-export default function DiscordEmbed({widgetId}: DiscordEmbedProps) : JSX.Element {
+export default function DiscordEmbed({ widgetId }: DiscordEmbedProps): JSX.Element {
   return (
     <div className={styles.wrapper}>
       <iframe

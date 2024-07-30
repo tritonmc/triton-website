@@ -4,7 +4,7 @@ type YoutubeEmbedProps = {
   videoId: string;
 };
 
-export default function YoutubeEmbed({videoId}: YoutubeEmbedProps) : JSX.Element {
+export default function YoutubeEmbed({ videoId }: YoutubeEmbedProps): JSX.Element {
   return (
     <div className={styles.wrapper}>
       <iframe
@@ -14,7 +14,8 @@ export default function YoutubeEmbed({videoId}: YoutubeEmbedProps) : JSX.Element
         height="480"
         frame-border={0}
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen />
+        allowFullScreen
+      />
     </div>
   );
 }

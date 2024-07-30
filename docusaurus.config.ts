@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -55,7 +55,7 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://triton.rexcantor64.com/spigot',
           label: 'Spigot',
@@ -79,7 +79,7 @@ const config: Config = {
         {
           type: 'search',
           position: 'right',
-        }
+        },
       ],
     },
     footer: {
@@ -130,7 +130,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.palenight,
-      additionalLanguages: ['json']
+      additionalLanguages: ['json'],
     },
     algolia: {
       appId: '05H2PEO6IV',
