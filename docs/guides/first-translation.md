@@ -22,7 +22,7 @@ This guide will only talk about the first two:
 - [Triton Placeholders](../concepts/placeholders.md)
 - [Triton Advanced Placeholders](../concepts/placeholders.md#advanced-placeholders-using-variables)
 - [Triton Patterns](../concepts/patterns.md)
-- PlaceholderAPI
+- [PlaceholderAPI](../concepts/placeholderapi.md)
 - [Triton API](../programatic-api/getting-started.md)
 
 ### Triton Placeholders
@@ -185,7 +185,7 @@ info:
 
 An [open-source tool](https://triton-generator.rexcantor64.com/) is in the works
 that'll mostly automate these steps.
-A guide on how to use it will be available later.
+There's more information in its [respective guide](../guides/bulk-translate.md).
 
 Already generated translations for some plugins is available in the
 [triton-translation-collection](https://github.com/tritonmc/triton-translation-collection)
