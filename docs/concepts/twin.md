@@ -22,10 +22,9 @@ There are two ways to get it: using Discord or by sending me a PM on Spigot.
 This is by far the fastest and most efficient way to get your TWIN token. Here is what you need to do:
 
 1. [Join our Discord if you haven't already](https://triton.rexcantor64.com/discord).
-2. Go to the `#verification` channel.
-3. Write your Spigot username in the chat.
-4. You should receive a message from the bot saying that your account has been verified.
-5. Finally, reply `!twin` to the bot to get the token.
+2. Use the `/verify <username>` command in **any** channel.
+3. You should receive a message from the bot saying that your account has been verified.
+4. Finally, click the button on `#verification` (or use the `/twintoken` command) to get the token.
 
 </TabItem>
 <TabItem value="spigot" label="PM on Spigot">
@@ -54,7 +53,7 @@ To add an item, simply click the `+` button and select either Text or Sign. You'
 
 ![TWIN empty text item](./twin2.png)
 
-I've already explained what each of those fields does in the
+An thorough explanation of each of these fields are is available in the
 [translations page](./translations.md), so check it out if you haven't already.
 
 To remove an item, simply click the `DELETE` button in the editing screen. If you've deleted an item by accident, simply click the undo button.  
@@ -90,16 +89,13 @@ You can toggle TWIN's dark mode by going to the settings (in the left sidebar).
 
 ## Privacy concerns
 
-All translations sent to/from TWIN pass on TWIN's servers.  
-Hosting of content sent between TWIN and your server
-is done on [Lucko's Bytebin](https://bytebin.lucko.me/).
-However, all data sent there is encrypted after passing through TWIN's servers.
-In reality, the data can only be access if you have the config code to access it
+All translations sent to/from TWIN are stored exclusively on TWIN's servers
+for 24 hours since upload.
+This includes both uploading from the plugin and saving in the web interface.  
+This data can only be accessed using the config code
 (the code that is generated when you type `/twin` in-game or when you save
-the config on TWIN). Bytebin deletes the content after a few days.  
-TWIN does not store any data on your translations.
-However, a log is kept for every upload, along with IP addresses, the version
-of the plugin who uploaded it and timestamps. This information is used to
-investigate possible leaks of TWIN tokens.
-Triton doesn't, and will never, sell any of this data to third parties.  
-Logs are deleted from time to time.
+the config on TWIN), which is randomly generated and cannot be bruteforced in
+a reasonable amount of time.  
+TWIN does not derive any data from your translations for purposes other
+than providing you with this service.
+Triton doesn't, and will never, sell any of this data to third parties.
