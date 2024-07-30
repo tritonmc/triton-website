@@ -12,3 +12,25 @@
 /javadocs https://jitpack.io/com/github/tritonmc/Triton/latest/javadoc/
 /banner https://skinmc.net/en/banner/editor
 /protocollib https://ci.dmulloy2.net/job/ProtocolLib/
+
+/getting-started/installation.html /docs/getting-started/installation
+/getting-started/initial-configuration.html /docs/getting-started/initial-configuration
+/faq /docs/faq
+/concepts/config.html /docs/concepts/config
+/concepts/storage.html /docs/concepts/storage
+/concepts/commands-permissions.html /docs/concepts/commands-permissions
+/concepts/translations.html /docs/concepts/translations
+/concepts/placeholders.html /docs/concepts/placeholders
+/concepts/twin.html /docs/concepts/twin
+/concepts/patterns.html /docs/concepts/patterns
+/concepts/placeholderapi.html /docs/concepts/placeholderapi
+/concepts/dynamic-signs.html /docs/concepts/dynamic-signs
+/guides/first-translation.html /docs/guides/first-translation
+/guides/bulk-translate.html /docs/guides/bulk-translate
+/guides/flags.html /docs/guides/flags
+/guides/velocity.html /docs/guides/velocity
+/experimental-features/async-protocollib.html /docs/experimental-features/async-protocollib
+/programatic-api/getting-started.html /docs/programatic-api/getting-started
+/migration/v2-to-v3.html /docs/migration/v2-to-v3
+/migration/v1-to-v2.html /docs/migration/v1-to-v2
+/migration/v0-to-v1.html /docs/migration/v0-to-v1
