@@ -72,7 +72,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/TritonMC/Triton',
+          href: 'https://github.com/tritonmc/Triton',
           label: 'GitHub',
           position: 'right',
         },
@@ -90,7 +90,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/tritonmc/Triton',
             },
           ],
         },
