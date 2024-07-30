@@ -1,0 +1,10 @@
+{
+  "label": "📦 Migration Guides",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "slug": "migration-guides",
+    "title": "Migration Guides",
+    "description": "Detailed guides on how to migrate between major Triton versions"
+  }
+}

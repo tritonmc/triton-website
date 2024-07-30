@@ -1,3 +1,8 @@
+---
+description: "Detailed steps on upgrading from Triton v1 to Triton v2"
+sidebar_position: 998
+---
+
 # Migrating from Triton v1 to v2
 
 Migrating from v1 to v2 is pretty straight forward and doesn't include any manual work.  

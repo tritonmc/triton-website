@@ -1,10 +1,15 @@
+---
+description: "Patterns allow translation of plugins without editing the original text"
+sidebar_position: 7
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Patterns
 
-::: tip REQUIREMENTS
+:::note[Requirements]
 Triton v2.0.0 or later is required.
 :::
-
-[[toc]]
 
 This feature allows you to translate messages without using placeholders.
 
@@ -18,15 +23,15 @@ To get started, you just need to add `patterns` to any existing Translatable Ite
 
 **Example:**
 
-:::: tabs
+<Tabs groupId="translation-editor">
+<TabItem value="twin" label="TWIN" default>
 
-::: tab TWIN
 To add a pattern to TWIN, use the _Patterns_ section available in Translatable Items.
 
 ![TWIN example](./patterns-1.png)
-:::
 
-::: tab JSON
+</TabItem>
+<TabItem value="json" label="JSON" default>
 
 ```json
 {
@@ -43,10 +48,10 @@ To add a pattern to TWIN, use the _Patterns_ section available in Translatable I
 },
 ```
 
-:::
-::::
+</TabItem>
+</Tabs>
 
-::: tip
+:::tip
 Depending on the message and plugin, you may need to try both `&` and `§` to get the color code right.
 :::
 
@@ -54,12 +59,12 @@ The example above will replace any `&aThis is something that needs &bto &dbe &1 
 Notice that `)` in the latter needs to be escaped, since this is regex.
 To make sure you're using valid regex, you can use a tool like [RegExr](https://regexr.com).
 
-::: tip
+:::tip
 To avoid people typing matching text in the chat, you can (and should) use the beginning (`^`)
 and end (`$`) anchors in your patterns.
 :::
 
-::: danger
+:::danger[Performance Considerations]
 Don't use patterns unless you really have to. Each pattern is checked against every message,
 which can hit your server performance severely. Use Triton placeholders when possible.
 :::
@@ -70,15 +75,13 @@ You can use regex groups to select variables and use them in the translated mess
 
 **Example:**
 
-:::: tabs
-
-::: tab TWIN
+<Tabs groupId="translation-editor">
+<TabItem value="twin" label="TWIN" default>
 
 ![TWIN example with variables](./patterns-2.png)
 
-:::
-
-::: tab JSON
+</TabItem>
+<TabItem value="json" label="JSON" default>
 
 ```json
 {
@@ -95,8 +98,8 @@ You can use regex groups to select variables and use them in the translated mess
 }
 ```
 
-:::
-::::
+</TabItem>
+</Tabs>
 
 ## Other information
 

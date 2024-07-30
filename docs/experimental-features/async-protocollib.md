@@ -1,11 +1,14 @@
+---
+description: "Run the ProtocolLib listener on a separate thread, improving performance"
+sidebar_position: 1
+---
+
 # Async ProtocolLib
 
-:::danger Experimental Feature Ahead
+:::danger[Experimental Feature Ahead]
 The feature below is experimental and might not behave as expected.
 Enable at your own risk!
 :::
-
-[[toc]]
 
 Up until Triton 3.6.0 almost all packets were intercepted on the main thread.  
 Starting with **Triton 3.7.0** you can enable an option on config to try out

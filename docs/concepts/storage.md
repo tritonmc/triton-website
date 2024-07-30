@@ -1,11 +1,13 @@
+---
+description: "Detailed description of how Triton stores translations and other data"
+sidebar_position: 2
+---
 # Storage
 
-::: warning
+:::warning
 Triton handles storage differently since v3. The documentation below
 might not apply to other versions.
 :::
-
-[[toc]]
 
 ## Introduction
 
@@ -27,7 +29,7 @@ If you want to use local storage, you don't need the make any changes, it's good
 
 However, if you want to use non-local storage, you have to change the storage type and fill in the information accordingly.
 
-```yaml{7}
+```yaml {7}
 # This section controls the storage location of player data and translations.
 # If using a database, the tables/collections will be created automatically for you.
 # You can use '/triton database upload' to upload the local translations to a remote storage.
@@ -47,7 +49,7 @@ storage:
   table-prefix: 'triton_'
 ```
 
-::: tip
+:::tip
 The `server-name` variable is only loaded when using non-local storage types
 and it's used to filter translations that have entries in the `server` field.  
 If you're using a server template system, it might not be possible to set this.
@@ -55,12 +57,12 @@ Leaving this empty will work correctly as long as you don't want to filter
 translations by server.
 :::
 
-::: warning
+:::warning
 If you're using the BungeeCord network approach, you must use the same storage configuration on all servers, including on BungeeCord itself.
 If you fail to do that, translations might not be loaded correctly.
 :::
 
-::: danger
+:::danger
 If you're using MySQL storage with BungeeCord (or a proxy), you **MUST** have the same configuration for `languages` on Triton's config on
 all servers and on the proxy.
 If you don't do this, translations will **not** be synced correctly between servers.
@@ -85,7 +87,7 @@ extremely seamless.
 
 ### Using `/triton database`
 
-::: danger
+:::danger
 Be extremely careful when using this command, since it will overwrite all files on download
 and all database content on upload.
 :::

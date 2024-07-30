@@ -1,6 +1,9 @@
-# Initial Configuration
+---
+description: Get started with editing Triton's configuration
+sidebar_position: 2
+---
 
-[[toc]]
+# Initial Configuration
 
 ## Type of Installation
 
@@ -15,7 +18,7 @@ With that in mind, let's get started.
 
 ---
 
-::: warning VELOCITY
+:::warning[VELOCITY]
 
 If you're using Velocity instead of BungeeCord, you can follow the same configuration that's described for BungeeCord.  
 However, there are some limitations with Velocity that you should be aware, so take a look at
@@ -40,13 +43,14 @@ If you want to use local storage, you don't need the make any changes, it's good
 
 However, if you want to use non-local storage, you have to change the storage type and fill in the information accordingly.
 
-```yaml{7}
+```yaml title="config.yml"
 # This section controls the storage location of player data and translations.
 # If using a database, the tables/collections will be created automatically for you.
 # You can use '/triton database upload' to upload the local translations to a remote storage.
 # This MUST match what is on BungeeCord
 storage:
   # Valid options: 'local', 'mysql', 'mongodb'
+  # highlight-next-line
   type: 'local'
   # This should match the name of this server in BungeeCord's config.yml
   # Used to filter translations for this server only
@@ -60,7 +64,7 @@ storage:
   table-prefix: 'triton_'
 ```
 
-::: tip
+:::tip
 The `server-name` variable is only loaded when using non-local storage types
 and it's used to filter translations that have entries in the `server` field.  
 If you're using a server template system, it might not be possible to set this.
@@ -68,12 +72,12 @@ Leaving this empty will work correctly as long as you don't want to filter
 translations by server.
 :::
 
-::: warning
+:::warning
 If you're using the BungeeCord network approach, you must use the same storage configuration on all servers, including on BungeeCord itself.
 If you fail to do that, translations might not be loaded correctly.
 :::
 
-::: danger
+:::danger
 If you're using MySQL storage with BungeeCord (or a proxy), you **MUST** have the same configuration for `languages` on Triton's config on
 all servers and on the proxy.
 If you don't do this, translations will **not** be synced correctly between servers.
@@ -88,7 +92,7 @@ To get a flag code, follow the [guide on generating flag codes](../guides/flags.
 
 Details about every variable below can be found in the [config page](../concepts/config.md).
 
-```yaml
+```yaml title="config.yml"
 # This will be ignored if 'bungeecord' is enabled.
 languages:
   # The language name. This will influence the language key in the translation files.
@@ -125,7 +129,7 @@ languages:
   #    - 'SERVER:say %player% (%uuid%) has just changed their language!'
 ```
 
-::: tip
+:::tip
 If you're using the BungeeCord network approach with local storage,
 you only need to configure the languages on the BungeeCord server.
 :::
@@ -138,12 +142,12 @@ To use it, you must first [get a TWIN token](../concepts/twin.md).
 To get the token, you can either join our [Discord server](https://triton.rexcantor64.com/discord)
 or DM me ([Rexcantor64](https://www.spigotmc.org/members/rexcantor64.165436/)) on Spigot.
 
-```yaml{4}
+```yaml
 # To access TWIN, you need a special token.
 twin-token: ''
 ```
 
-::: tip
+:::tip
 If you're using the BungeeCord network approach, you don't need to put the token in any Spigot server.
 :::
 

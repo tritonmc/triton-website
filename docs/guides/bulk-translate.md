@@ -1,6 +1,9 @@
-# Bulk translating with the generator tool
+---
+description: "Learn how to use the Triton Generator Tool to quickly translate plugins"
+sidebar_position: 2
+---
 
-[[toc]]
+# Bulk translating with the generator tool
 
 ## What is the Triton Generator Tool?
 
@@ -54,7 +57,7 @@ After filling in all the information, click the "Convert" button.
 Two files will be downloaded to your computer: the collection file (`output.json`)
 and the original file with the content replaced by placeholders (`original.<file extension>`).
 
-::: warning
+:::warning
 Some browsers, like Chrome, will block multiple downloads from the same site.
 Click on "Accept" when the permission request comes up.
 :::

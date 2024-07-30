@@ -1,9 +1,14 @@
+---
+description: "TWIN is the web interface for Triton that allows for easy management of your translations"
+sidebar_position: 6
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # TWIN
 
 **TWIN** stands for **T**​riton **W**​eb **In**​terface.  
 Its goal is you help you manage your `translations` folder easily.
-
-[[toc]]
 
 ## Get your TWIN token
 
@@ -11,9 +16,9 @@ To get started, you first need to get your TWIN token.
 This token is used to verify your purchase and give you access to the TWIN web services.
 There are two ways to get it: using Discord or by sending me a PM on Spigot.
 
-:::: tabs
+<Tabs>
+<TabItem value="discord" label="Discord" default>
 
-::: tab Discord
 This is by far the fastest and most efficient way to get your TWIN token. Here is what you need to do:
 
 1. [Join our Discord if you haven't already](https://triton.rexcantor64.com/discord).
@@ -22,14 +27,14 @@ This is by far the fastest and most efficient way to get your TWIN token. Here i
 4. You should receive a message from the bot saying that your account has been verified.
 5. Finally, reply `!twin` to the bot to get the token.
 
-:::
+</TabItem>
+<TabItem value="spigot" label="PM on Spigot">
 
-::: tab PM on Spigot
 This is really straightforward, but it takes longer than the previous method. I might take a few hours or even days before I reply.  
 Just send me a [PM on Spigot](https://www.spigotmc.org/members/rexcantor64.165436/) asking for your TWIN token.
-:::
 
-::::
+</TabItem>
+</Tabs>
 
 ## Using TWIN
 

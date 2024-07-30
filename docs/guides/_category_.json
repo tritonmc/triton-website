@@ -1,0 +1,10 @@
+{
+  "label": "📚 Guides",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "guides",
+    "title": "Guides",
+    "description": "Easy to follow guides for various subjects related to Triton"
+  }
+}
