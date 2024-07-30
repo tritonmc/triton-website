@@ -1,0 +1,5 @@
+Contact: mailto:security.triton@diogotc.com
+Contact: https://github.com/tritonmc/Triton/security/advisories/new
+Expires: 2030-12-31T23:59:00.000Z
+Acknowledgments: https://github.com/tritonmc/Triton/security/advisories
+Preferred-Languages: en,pt
