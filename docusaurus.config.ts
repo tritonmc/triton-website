@@ -76,6 +76,10 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          type: 'search',
+          position: 'right',
+        }
       ],
     },
     footer: {
@@ -127,6 +131,11 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.palenight,
       additionalLanguages: ['json']
+    },
+    algolia: {
+      appId: '05H2PEO6IV',
+      apiKey: '546bcea7b4670b37f2b7d4dd0b47d0cb',
+      indexName: 'tritonmc_triton',
     },
   } satisfies Preset.ThemeConfig,
 };
