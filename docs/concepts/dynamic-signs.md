@@ -1,6 +1,11 @@
+---
+description: "Dynamic signs allows translating signs that are dynamically"
+sidebar_position: 9
+---
+
 # Dynamic Signs
 
-::: tip REQUIREMENTS
+:::note[Requirements]
 Requires Triton v2.3.0 or later.
 :::
 

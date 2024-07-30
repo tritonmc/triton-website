@@ -1,13 +1,18 @@
+---
+description: "Detailed steps on upgrading from Triton v0 to Triton v1"
+sidebar_position: 999
+---
+
 # Migrating from Triton v0 to v1
 
-::: warning
+:::warning
 **This guide is only intended to upgrade from v0 to v1. If you want to migrate from v0 to another version, you need to fully migrate to v1 beforehand.**
 :::
 
 This guide shows how to migrate all your data from Triton v0 (MultiLanguagePlugin).  
 Migrating from v0 is completely free.
 
-::: warning
+:::warning
 **IT IS HIGHLY RECOMMENDED TO BACKUP AT LEAST YOUR** `MultiLanguagePlugin` **FOLDER. PLEASE BACKUP
 THE ENTIRE SERVER(S) IF POSSIBLE**
 :::

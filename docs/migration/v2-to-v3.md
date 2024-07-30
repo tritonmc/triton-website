@@ -1,17 +1,24 @@
+---
+description: "Detailed steps on upgrading from Triton v2 to Triton v3"
+sidebar_position: 997
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import SpigotConfig from '!!raw-loader!./v3_config.yml';
+import BungeeConfig from '!!raw-loader!./v3_bungee_config.yml';
+
 # Migrating from Triton v2 to v3
 
-::: warning
+:::warning
 Before proceeding, make sure to backup your `Triton` folder on all servers
 in case something goes wrong during the migration!
 :::
-
-[[toc]]
 
 ## Changelog
 
 Below are the changes that require your attention:
 
-- MySQL support for translations **(:collision: Breaking Change)**
+- MySQL support for translations **(:boom: Breaking Change)**
 - Better debugging tools (`debug` has been replaced with `log-level`)
 - Removed `universal` field for translations since it was redundant
 - Add feature that prevents players from typing placeholders in the chat
@@ -37,21 +44,23 @@ I'd recommend updating them before proceeding with the migration guide.
 Below is a copy of the default config for both Spigot and BungeeCord,
 with the changes highlighted.
 
-::: details Spigot config.yml
+<details>
+<summary>Spigot config.yml</summary>
 
 Alternatively, see the [diff on GitHub](https://github.com/tritonmc/Triton/commit/8c54291111a4693c07c8373f3945405c50c33fa2#diff-0f1be8eec416e71c28b41efb0544df26).
 
-<<< @/docs/migration/v3_config.yml{65-70,72-88,183-185}
+<CodeBlock language="yaml" title="spigot/plugins/Triton/config.yml" showLineNumbers>{SpigotConfig}</CodeBlock>
 
-:::
+</details>
 
-::: details Bungee config.yml
+<details>
+<summary>Bungee config.yml</summary>
 
 Alternatively, see the [diff on GitHub](https://github.com/tritonmc/Triton/commit/8c54291111a4693c07c8373f3945405c50c33fa2#diff-c86926b4793226abff7207c78d20c992).
 
-<<< @/docs/migration/v3_bungee_config.yml{61-66,68-81}
+<CodeBlock language="yaml" title="bungee/plugins/Triton/config.yml" showLineNumbers>{BungeeConfig}</CodeBlock>
 
-:::
+</details>
 
 ### Storage options
 
@@ -66,7 +75,7 @@ The guide linked above will help you go through the configuration.
 Just like every major release of Triton until now, this version includes auto migration.  
 Due to the lack of major changes in the file format, Triton might have a hard time identifying that there is a need for migration.
 
-::: tip
+:::tip
 Triton starts the migration if it finds the `players.yml` file but it doesn't find the `players.json` file. This is important if you want to manually trigger the migration.  
 It is **extremely important that you do not run the migration more than once**,
 otherwise it might break your translations.
@@ -89,7 +98,7 @@ After starting your server and **making sure all servers share the same storage 
 you must run `/triton database upload` to copy all the translations from the `translations`
 folder to the database.
 
-::: danger
+:::danger
 As I said, these commands are very destructive.  
 Running `/triton database upload` will **delete ALL TRANSLATIONS** that are in the database already.
 :::
@@ -103,7 +112,7 @@ into the `translations` folder.
 Then you can simply edit them as you'd like and upload with `/triton database upload`
 as before.
 
-::: danger
+:::danger
 Just like the upload command, `/triton database download` can be very destructive.
 When executed, all `.json` files in the `translations` folder are deleted and replaced
 with the translations from the database.

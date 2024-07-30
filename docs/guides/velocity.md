@@ -1,6 +1,9 @@
-# Velocity Proxy
+---
+description: "Learn how to use Triton on the Velocity Proxy"
+sidebar_position: 4
+---
 
-[[toc]]
+# Velocity Proxy
 
 Setup with the Velocity Proxy is very similar with BungeeCord.  
 Follow the instructions for BungeeCord available in this documentation after

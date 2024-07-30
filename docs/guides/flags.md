@@ -1,3 +1,8 @@
+---
+description: "Learn how to create your own flags for the language selector, or use existing ones"
+sidebar_position: 3
+---
+
 # Generate flag codes
 
 For each language you must set a flag code that'll represent the banner
@@ -54,4 +59,4 @@ All of these flags are rotated 90 degrees to accommodate a landscape layout.
 - Venezuela: `eapobsly`
 
 If you'd like to add a flag to this list,
-click the `Improve this page` button below.
+click the `Edit this page` button below.

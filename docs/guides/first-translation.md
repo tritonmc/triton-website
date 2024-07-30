@@ -1,12 +1,18 @@
+---
+description: "This guide goes into the basics of creating a translation"
+sidebar_position: 1
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import YoutubeEmbed from "@site/src/components/YoutubeEmbed";
+
 # First Translation
 
 ## Video Tutorial
 
 If you prefer a video tutorial of this guide, you can follow the official get started video:
 
-<div class="video-wrapper">
-<iframe width="853" height="480" src="https://www.youtube.com/embed/ZJQUd1oD1EY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<YoutubeEmbed videoId="ZJQUd1oD1EY" />
 
 ## Ways of Translating
 
@@ -24,7 +30,7 @@ This guide will only talk about the first two:
 As an example, we're going to translate the [CMI plugin](https://www.spigotmc.org/resources/cmi-270-commands-insane-kits-portals-essentials-economy-mysql-sqlite-much-more.3742/),
 more precisely the `info.NoPermission` message:
 
-```yaml{3}
+```yaml {3}
 info:
   prefix: '&e[&aCMI&e] '
   NoPermission: "&cYou don't have permission!"
@@ -38,9 +44,9 @@ As we can see, the `info.NoPermission` message is pretty simple to translate bec
 
 #### Step 1 - Add the translation to Triton
 
-:::: tabs
+<Tabs groupId="translation-editor">
+<TabItem value="twin" label="TWIN" default>
 
-::: tab TWIN
 Before proceeding, make sure you've [setup TWIN](../getting-started/initial-configuration.md#translations).
 
 If you haven't already, open TWIN by running `/twin` on console or in-game.
@@ -62,9 +68,10 @@ You can repeat this process for other translations.
 
 When you're ready, hit `Save` in the top right corner of the dashboard.
 Follow the on-screen instructions to download the translations to the server.
-:::
 
-::: tab JSON
+</TabItem>
+<TabItem value="json" label="JSON" default>
+
 When using JSON, the process gets a little more complicated.
 
 1. First, go into the `translations` folder inside the `plugins/Triton` folder. If it doesn't exist, create one.
@@ -88,11 +95,11 @@ Here is an example file with just this translation:
 ```
 
 Finally, save the file and reload the plugin with `/triton reload`.
-:::
 
-::::
+</TabItem>
+</Tabs>
 
-::: tip
+:::tip
 You don't have to use the `cmi.info.NoPermission` key. It was just the example.
 As long as you use the same key in the placeholder, it can be whatever you want.  
 However, I'd personally recommend following some kind of convention for your keys.
@@ -105,7 +112,7 @@ Triton placeholders follow the following syntax: `[lang]insert.translation.key.h
 
 With that in mind, you can simply replace the original message with the placeholder.
 
-```yaml{3}
+```yaml {3}
 info:
   prefix: '&e[&aCMI&e] '
   NoPermission: '[lang]cmi.info.NoPermission[/lang]'
@@ -123,7 +130,7 @@ Well, that's exactly what we're going to do now.
 
 This is where we left off in the previous section:
 
-```yaml{5}
+```yaml {5}
 info:
   prefix: '&e[&aCMI&e] '
   NoPermission: '[lang]cmi.info.NoPermission[/lang]'
@@ -147,8 +154,8 @@ As such, we're going to replace the variables in the original message
 `&c[playerName] doesn''t have permission for: [permission]` with `%1` and `%2`.  
 The result should be something like `&c%1 doesn''t have permission for: %2`.
 
-::: tip
-Now matter how the plugin you're translating handles variables,
+:::tip
+No matter how the plugin you're translating handles variables,
 you'll always need to replace them with `%1`, `%2`, `%3`, etc...  
 The original variables will be used in _Step 2_.
 :::
@@ -164,7 +171,7 @@ to `%1`, `%2`, etc in the final message, following the order in which they were 
 
 This is how we'll use it for our use-case:
 
-```yaml{5}
+```yaml {5}
 info:
   prefix: '&e[&aCMI&e] '
   NoPermission: '[lang]cmi.info.NoPermission[/lang]'

@@ -1,6 +1,8 @@
+---
+description: "Details about the syntax of Triton placeholders"
+sidebar_position: 5
+---
 # Triton Placeholders
-
-[[toc]]
 
 This, along with [translations](./translations.md), is by far the most complex part of the plugin. So let's dive in!
 
@@ -36,7 +38,7 @@ It's syntax is very simple: `[lang]translation.key.here[/lang]`.
 If you replace `translation.key.here` with the key of the translation you want,
 that placeholder will be replaced with the translation in the language of the player.
 
-::: warning
+:::warning
 Since various kinds of text in Minecraft have length limits, most plugins truncate those texts if they would cause the client to crash.  
 Because of that, Triton might not be able to detect a placeholder if it has been truncated. To fix that, reduce the key length and try again.
 :::
@@ -55,7 +57,7 @@ If you remember correctly, you define variables in the translation using `%1`, `
 These will be replaced with the content inside the `[arg]` tags, in order
 (the first `[arg]` tag will be `%1`, the second will be `%2` and so on).
 
-::: tip
+:::tip
 You can nest placeholders if you want.
 
 Example: `[lang]economy.withdrawal[args][arg]10[/arg][arg][lang]currency.usd[/lang][/arg][/args][/lang]`

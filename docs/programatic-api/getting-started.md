@@ -1,3 +1,8 @@
+---
+description: "Interact with Triton directly from your plugin using Triton's API"
+sidebar_position: 1
+---
+
 # Getting Started
 
 This page is under construction.

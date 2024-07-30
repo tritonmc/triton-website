@@ -1,3 +1,8 @@
+---
+description: Download and install the plugin, along with its dependencies
+sidebar_position: 1
+---
+
 # Installation
 
 ## Downloading the plugin and dependencies
@@ -14,7 +19,7 @@ Additionally, you might need to download some dependencies if you don't have the
 
 Once you've downloaded the plugin, place the `.jar` in the `plugins` folder of all your servers (Spigot, BungeeCord, etc).
 
-::: warning
+:::warning
 Using any other server software than Spigot or BungeeCord (e.g. Paper, Waterfall, etc) is not officially supported.  
 However, since a large number of users are using those, bug fixes will be provided,
 even though internal testing is only done on vanilla Spigot/BungeeCord.

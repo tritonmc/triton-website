@@ -1,6 +1,11 @@
-# Translations
+---
+description: "Overview of translations and reference for how they are stored"
+sidebar_position: 4
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-[[toc]]
+# Translations
 
 ## Introduction
 
@@ -23,17 +28,16 @@ Before you can add translations, you must have, at least, one collection.
 Triton generates the `default` collection for you automatically, but you can
 rename it or create other collections.
 
-:::: tabs
+<Tabs groupId="translation-editor">
+<TabItem value="twin" label="TWIN" default>
 
-::: tab TWIN
-
-Creating a collection through TWIN is extremely straight-forward.
+Creating a collection through TWIN is extremely straightforward.
 Simply click on the "Add Collection" button in the sidebar and type the name for the collection.
 Hit "Add" and _bam_, your collection has been created.
 
-:::
+</TabItem>
+<TabItem value="json" label="JSON" default>
 
-::: tab JSON
 Each collection is a JSON file in the `translations` folder, so you can create them
 simply by creating a new file.
 
@@ -58,29 +62,33 @@ alternative syntax:
 }
 ```
 
-:::
-::::
+</TabItem>
+</Tabs>
 
 ### Deleting a collection
 
 Deleting a collection is also very easy to do, just follow the instructions
 for your preferred method:
 
-:::: tabs
-::: tab TWIN
+<Tabs groupId="translation-editor">
+<TabItem value="twin" label="TWIN" default>
+
 Deleting a collection on TWIN will, by default, move the translations to the default collection.
 If you don't want this to happen, consider selecting all the translations inside the collection
 and using the "Move to collection" bulk item.
 
 To delete a collection, just click the "Delete collection" button in the sidebar and select the collection you want to delete.
-:::
-::: tab JSON
+
+</TabItem>
+<TabItem value="json" label="JSON" default>
+
 Deleting a collection file from the `translations` folder also deletes all translations inside.
 Copy them to another collection if this is not the behaviour you want.
 
 To delete a collection, simply delete the corresponding file inside the `translations` folder.
-:::
-::::
+
+</TabItem>
+</Tabs>
 
 ## Managing translations
 
@@ -95,8 +103,9 @@ The type field is automatically set on TWIN by selecting the text type.
 Meanwhile, the `languages` field is where you'll define the actual translations for each
 language.
 
-::::: tabs
-:::: tab TWIN
+<Tabs groupId="translation-editor">
+<TabItem value="twin" label="TWIN" default>
+
 To add a text translation, click on the "Add item" (`+`) button on the
 top right corner while on the dashboard. Then choose _"Text"_ to create a Text Item.
 
@@ -104,12 +113,14 @@ Fill in the information as you wish.
 
 Example:
 ![TWIN Text Translation Item example](./translations-1.png)
-::::
-:::: tab JSON
+
+</TabItem>
+<TabItem value="json" label="JSON" default>
+
 To add a text translation, simply open the `translations/default.json` file
 and add this object (as an example) to the JSON array:
 
-```json{2-3}
+```json {2-3}
 {
   "type": "text",
   "key": "my.first.translation",
@@ -140,15 +151,16 @@ If this is the first time you opened your `translations/default.json` file, this
 ]
 ```
 
-::: tip
+:::tip
 To make sure you're using valid JSON, use a JSON parser.
 There are hundreds of JSON parsers online, but [here](https://jsonformatter.org/json-pretty-print) is one (completely random one).  
 You can also use an IDE like [Visual Studio Code](https://code.visualstudio.com)
 :::
 
 If you are not sure how to use the `translations/default.json` file, take a look at these [examples](https://github.com/tritonmc/Triton/tree/v1/examples).
-::::
-:::::
+
+</TabItem>
+</Tabs>
 
 #### Using variables
 
@@ -163,11 +175,14 @@ These variables will later be replaced by their actual value passed through the
 [Triton Placeholder](./placeholders.md)'s `arg` tag.
 
 Example:
-:::: tabs
-::: tab TWIN
+
+<Tabs groupId="translation-editor">
+<TabItem value="twin" label="TWIN" default>
+
 ![TWIN Translations with variables example](./translations-2.png)
-:::
-::: tab JSON
+
+</TabItem>
+<TabItem value="json" label="JSON" default>
 
 ```json
 {
@@ -180,12 +195,12 @@ Example:
 }
 ```
 
-:::
-::::
+</TabItem>
+</Tabs>
 
 #### Using JSON chat components
 
-::: tip REQUIREMENTS
+:::note[Requirements]
 This feature requires Triton v3.1.0 or newer.  
 Understanding of the [Minecraft JSON Text Format](https://minecraft.gamepedia.com/Raw_JSON_text_format) is also required.
 :::
@@ -208,7 +223,7 @@ In the future, a button to switch between text and JSON modes will be added, whi
 
 #### Using Kyori's MiniMessage
 
-::: tip REQUIREMENTS
+:::note[Requirements]
 This feature requires Triton v3.5.1 or newer and PaperMC (or a fork).  
 Understanding of the [MiniMessage Format](https://docs.adventure.kyori.net/minimessage.html#format) is also required.
 :::
@@ -228,7 +243,7 @@ Example:
 
 #### Using PlaceholderAPI
 
-::: tip REQUIREMENTS
+:::note[Requirements]
 This feature requires Triton v3.7.0 or newer.
 :::
 
@@ -244,14 +259,16 @@ Welcome, %player_name%!
 
 Also known as Sign Groups, these can be used to translate signs.
 
-:::: tabs
+<Tabs groupId="translation-editor">
+<TabItem value="twin" label="TWIN" default>
 
-::: tab TWIN
 Here is an example of a working sign:
 
 ![TWIN Sign example](./translations-3.png)
-:::
-::: tab JSON
+
+</TabItem>
+<TabItem value="json" label="JSON" default>
+
 **Sign Groups** look a bit different. Their type is `sign` instead of `text`.  
 Here is an example of a working sign:
 
@@ -290,8 +307,9 @@ Finally, the `locations` parameter holds a list of all the signs in this **Sign 
 While you can't provide dynamic arguments to signs directly, you can still have dynamic signs.
 Take a look at the [dynamic signs page](./dynamic-signs.md) if you want to translate signs
 that have dynamic information (e.g. game join, shops).
-:::
-::::
+
+</TabItem>
+</Tabs>
 
 ## Available Fields for Translatable Items
 

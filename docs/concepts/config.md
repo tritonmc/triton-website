@@ -1,8 +1,10 @@
+---
+sidebar_position: 1
+description: "Detailed reference of Triton's config file"
+---
 # Plugin Configuration
 
 This page is a guide on Triton's `config.yml` file.
-
-[[toc]]
 
 ## Introduction
 
@@ -25,7 +27,8 @@ Each language must have a language ID (the key of the YML section),
 a `flag` and a `display-name`.  
 Both `commands` and `minecraft-code` are optional.
 
-::: details Example Language
+<details>
+<summary>Example language</summary>
 
 ```yaml
 languages:
@@ -34,9 +37,9 @@ languages:
     display-name: '&aEnglish (UK)'
 ```
 
-:::
+</details>
 
-::: warning
+:::warning
 When using BungeeCord with a non-local storage option (read below),
 you'll need to make sure this section is _exactly_ the same across all servers.  
 The only exception to this rule is the `commands` field that is ignored on Spigot
@@ -59,7 +62,8 @@ You can find the complete list of locales in the
 
 All the values in the list are **case-insensitive**
 
-::: details Usage example
+<details>
+<summary>Usage example</summary>
 
 ```yaml
 languages:
@@ -69,7 +73,7 @@ languages:
     minecraft-code: [en_GB, en_US, en_AU, en_CA, en_NZ, en_PT, en_UD]
 ```
 
-:::
+</details>
 
 ### `display-name`
 
@@ -85,10 +89,11 @@ Sometimes you might have missing translations on all languages or just don't wan
 fallback directly to the main language (e.g. make European Portuguese fallback to Brazillian portuguese first and then English).  
 This is a list of languages to try if the translation is not available in this language.
 
-Despite the value of this field, Triton will always attempt to fetch the translation from the default language
+Regardless of the value of this field, Triton will always attempt to fetch the translation from the default language
 after trying all the languages in the config.
 
-:::details Example
+<details>
+<summary>Example</summary>
 
 Consider the following configuration (some fields are removed for simplification):
 
@@ -124,7 +129,7 @@ from the following languages, in order, until that language has the requested tr
 - Spanish (Spain) - `es_ES`
 - English (UK) - `en_GB`
 
-:::
+</details>
 
 ### `commands`
 
@@ -143,8 +148,10 @@ There are 2 available variables for use: `%player%` and `%uuid%`.
 If you're using BungeeCord, you can also limit commands to certain servers by doing something like:
 `BUNGEE:lobby,lobby-2,lobby-3:alert This will only run on 3 servers!`
 
-::: warning
+:::warning
+
 The commands **must not** have a preceding slash (`/`).
+
 :::
 
 #### Examples
@@ -167,10 +174,12 @@ Run command on BungeeCord console, but only if the player is on the `lobby` serv
 BUNGEE:lobby:alert This will only run on lobby!
 ```
 
-::: tip
+:::tip
+
 _(BungeeCord only)_
 If a command you're using contains a `:` and you want it to be universal, do something like this:
 `PLAYER::give @a minecraft:dirt`
+
 :::
 
 ### `main-language`
@@ -302,7 +311,7 @@ be translated to the default language.
 
 ### `prevent-placeholders-in-chat`
 
-_Default: true_
+_Default: true_  
 When enabled, if a player types a placeholder in the chat, it will be ignored by Triton.
 Otherwise, the placeholder will be translated like normal.  
 Keep in mind that placeholders outside the player's message (e.g. in the prefix), will

@@ -1,4 +1,4 @@
 [build]
-  command = "yarn docs:build"
-  publish = "public/"
+  command = "npm run build"
+  publish = "build/"
   ignore = "git log -1 --pretty=%B | grep dependabot"

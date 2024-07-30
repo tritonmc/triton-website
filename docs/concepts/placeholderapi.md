@@ -1,6 +1,11 @@
+---
+description: "Triton integrates with PlaceholderAPI, allowing translations to be used through PAPI placeholders"
+sidebar_position: 8
+---
+
 # clip's PlaceholderAPI
 
-::: tip REQUIREMENTS
+:::note[Requirements]
 Requires Triton v1.1.0 or later.
 :::
 

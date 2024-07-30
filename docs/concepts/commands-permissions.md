@@ -1,3 +1,8 @@
+---
+description: "Detailed reference for Triton's commmands and permissions"
+sidebar_position: 3
+---
+
 # Commands and Permissions
 
 Here is a brief summary of the plugin's commands and permissions:

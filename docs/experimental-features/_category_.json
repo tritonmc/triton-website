@@ -1,0 +1,10 @@
+{
+  "label": "🧪 Experimental Features",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "experimental-features",
+    "title": "Experimental Features",
+    "description": "List of unstable features that are not finalized and may change at any moment"
+  }
+}

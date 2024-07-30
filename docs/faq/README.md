@@ -1,6 +1,10 @@
-# FAQ
+---
+title: ❓ FAQ
+description: Frequently asked questions about Triton
+sidebar_position: 2
+---
 
-[[toc]]
+# FAQ
 
 ## I cannot translate item names and lores on inventory
 
