@@ -23,3 +23,14 @@ This is due to technical limitations.
 
 Since version **3.7.0** you can use PlaceholderAPI placeholders inside translations, which
 aliviates the limitation of not being able to use variables when translating with PlaceholderAPI.
+
+## Is there a placeholder to get the player's current language?
+
+No, Triton does not provide any placeholders by default.
+However, it is easy to add this functionality by taking advantage of the
+[PlaceholderAPI Integration](../concepts/placeholderapi.md).
+
+Simply create a new translation with the desired key (for example, `lang`) and then
+set the text in each language to the name of the language itself (for example, set the
+English translation to `English`, the Portuguese translation to `Portuguese`, etc.).
+Finally, you can use the PAPI `%triton_lang%` placeholder to get the player's language.
