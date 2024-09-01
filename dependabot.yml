@@ -7,6 +7,9 @@ updates:
     # Check the npm registry for updates every month
     schedule:
       interval: 'monthly'
+    # Use conventional commits
+    commit-message:
+      prefix: "chore"
 groups:
   non-security:
     applies-to: version-updates
