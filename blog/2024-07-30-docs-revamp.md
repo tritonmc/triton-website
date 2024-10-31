@@ -11,6 +11,8 @@ Along with a fresh new coat of paint, this redesign brings a new blog section
 to Triton's website, which will contain major release notes (e.g. for the upcoming v4 release),
 development journals, and more.
 
+<!-- truncate -->
+
 With regards to the content itself, nothing has changed significantly.
 There were, however, some corrections made to outdated content.
 
