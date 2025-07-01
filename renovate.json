@@ -5,6 +5,9 @@
     "group:allNonMajor",
     "schedule:monthly"
   ],
+  "ignorePresets": [
+    ":semanticPrefixFixDepsChoreOthers"
+  ],
   "lockFileMaintenance": {
     "enabled": true,
     "extends": ["schedule:monthly"]
