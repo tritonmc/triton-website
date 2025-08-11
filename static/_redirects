@@ -11,7 +11,7 @@
 /api-latest https://github.com/tritonmc/Triton/releases/latest
 /javadocs https://repo.diogotc.com/javadoc/releases/com/rexcantor64/triton/triton-api/latest
 /banner https://skinmc.net/en/banner/editor
-/protocollib https://ci.dmulloy2.net/job/ProtocolLib/
+/protocollib https://github.com/dmulloy2/ProtocolLib/releases/tag/dev-build
 
 /getting-started/installation.html /docs/getting-started/installation
 /getting-started/initial-configuration.html /docs/getting-started/initial-configuration
