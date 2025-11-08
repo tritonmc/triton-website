@@ -42,6 +42,9 @@ You might want to use PlaceholderAPI with Triton to show the messages in the rec
 
 For that, just use `%rel_triton_translation.key%`, where `translation.key` is the key of the translation you want (i.e. the one you set on TWIN).
 
+Some plugins might swap the players given to PAPI, so starting in Triton v3.12.4
+you can use `%rel_triton2_translation.key%` if the `triton` placeholder yields the incorrect language.
+
 ## Using in translations
 
 Looking to use PlaceholderAPI inside translations?
