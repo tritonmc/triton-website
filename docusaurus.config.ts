@@ -135,7 +135,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.palenight,
-      additionalLanguages: ['json'],
+      additionalLanguages: ['diff', 'json'],
     },
     algolia: {
       appId: '05H2PEO6IV',
