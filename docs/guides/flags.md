@@ -41,6 +41,7 @@ All of these flags are rotated 90 degrees to accommodate a landscape layout.
 - Italy: `pacEbf` (dark green) | `pakEbf` (light green)
 - Israel `paeyespoet`
 - Japan: `pabt`
+- Mexico: `papipvpMdtcEbf`
 - Mongolia: `eabEbflG`
 - Philippines: `pallpvpcexbIed`
 - Palestine: `paaycsbF`
