@@ -2,3 +2,7 @@ misc:
   label: Misc
   permalink: /misc
   description: Miscellaneous posts
+release-notes:
+  label: Release Notes
+  permalink: /release-notes
+  description: Details about new releases of Triton and adjacent projects

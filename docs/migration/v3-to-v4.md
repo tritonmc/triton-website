@@ -11,6 +11,10 @@ in case something goes wrong during the migration!
 If you are using MySQL, it is recommended to backup the database as well.
 :::
 
+This guide is focused on the migration steps to update to Triton v4.
+Everyone is encouraged to also read the [accompanying blog post](/blog/triton-v4-released)
+detailing new features and improvements.
+
 ## Changelog
 
 Below are the highlights of this update that might require your attention:
