@@ -30,6 +30,9 @@ Contrary to previous major Triton updates, this update **requires manual interve
 
 Follow the instructions in the [installation guide](../getting-started/installation.md).
 
+Make sure to update Triton on all servers and the proxy,
+as some of the bridge messages have changed from Triton v3.
+
 ## Update `messages.yml` {#messages-yml-minimessage}
 
 :::note
