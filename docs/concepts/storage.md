@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::warning
 Triton handles storage differently since v3. The documentation below
-might not apply to other versions.
+might not apply to older versions.
 :::
 
 ## Introduction
@@ -23,30 +23,31 @@ Player language preferences when using non-local storage are fetched as needed.
 ## Quick setup
 
 Triton currently supports local (JSON) storage and MySQL storage.
-MongoDB support is in the works, but it's not supported at the moment.
 
-If you want to use local storage, you don't need the make any changes, it's good to go out of the box.
+If you want to use local storage, you don't need the make any changes,
+it's good to go out of the box.
 
-However, if you want to use non-local storage, you have to change the storage type and fill in the information accordingly.
+However, if you want to use non-local storage (MySQL),
+you have to change the storage type and fill in the information accordingly.
 
-```yaml {7}
+```yaml title="config.yml" {7}
 # This section controls the storage location of player data and translations.
 # If using a database, the tables/collections will be created automatically for you.
 # You can use '/triton database upload' to upload the local translations to a remote storage.
-# This MUST match what is on BungeeCord
+# If you are using a proxy (e.g., BungeeCord or Velocity), this MUST match Triton's configuration there.
 storage:
-  # Valid options: 'local', 'mysql', 'mongodb'
+  # Valid options: 'local', 'mysql'
   type: 'local'
-  # This should match the name of this server in BungeeCord's config.yml
+  # This should match the name of this server your proxy's configuration (e.g., BungeeCord's config.yml or Velocity's velocity.toml).
   # Used to filter translations for this server only
   server-name: 'lobby'
   # The options below this are for non-local storage only
-  host: 'localhost'
+  host: "localhost"
   port: 3306
-  database: 'triton'
-  username: 'root'
-  password: ''
-  table-prefix: 'triton_'
+  database: "triton"
+  username: "root"
+  password: ""
+  table-prefix: "triton_"
 ```
 
 :::tip
@@ -58,17 +59,15 @@ translations by server.
 :::
 
 :::warning
-If you're using the BungeeCord network approach, you must use the same storage configuration on all servers, including on BungeeCord itself.
+If you're using a proxy, you must use the same storage configuration on all servers, including on the proxy itself.
 If you fail to do that, translations might not be loaded correctly.
 :::
 
 :::danger
-If you're using MySQL storage with BungeeCord (or a proxy), you **MUST** have the same configuration for `languages` on Triton's config on
+If you're using MySQL storage with a proxy, you **MUST** have the same configuration for `languages` on Triton's config on
 all servers and on the proxy.
 If you don't do this, translations will **not** be synced correctly between servers.
 :::
-
-All fields in the configuration above should be pretty self explanatory.
 
 ## Managing translations while using non-local storage
 
@@ -94,10 +93,10 @@ and all database content on upload.
 
 This command allows you to copy your database content to a JSON format in the
 `translations` folder.  
-To do this, run `/triton database download` from the BungeeCord console
-(or Spigot console if you're not running a server network) or in-game.
-The files will be downloaded to BungeeCord (or equivalent proxy) if you're running a server network.
-Otherwise, they'll be placed in your Spigot server.
+To do this, run `/triton database download` from the proxy console
+(or Spigot/Paper console if you're not running a server network) or in-game.
+The files will be downloaded to the proxy if you're running a server network.
+Otherwise, they'll be placed in your Spigot/Paper server.
 
 After downloading the content from the database, you can edit as you wish.
 
@@ -106,7 +105,7 @@ using `/triton database upload`.
 
 ## Migrating between storage types
 
-It's not possible to migration player language preferences.
+It's not possible to migrate player language preferences.
 
 ### From non-local storage to local storage
 
@@ -127,7 +126,7 @@ and then back to non-local storage.
 Triton uses [HikariCP](https://github.com/brettwooldridge/HikariCP) for handling MySQL connections,
 which means you can customize the connection pool yourself.
 
-Advanced options are available under `storage.mysql-pool-advanced`, for both BungeeCord and Spigot.
+Advanced options are available under `storage.mysql-pool-advanced`.
 
 ```yaml
 mysql-pool-advanced:

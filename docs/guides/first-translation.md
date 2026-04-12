@@ -164,7 +164,7 @@ The original variables will be used in _Step 2_.
 
 This step is also very similar with the one from the previous section.  
 When using variables, the format differs slightly:
-`[lang]insert.translation.key.here[args][arg]variable1[/arg][arg]variable2[/arg][/args][/lang]`.
+`[lang]insert.translation.key.here[arg]variable1[/arg][arg]variable2[/arg][/lang]`.
 
 Keep in mind that everything inside the `[arg][/arg]` tags will be used as a replacement
 to `%1`, `%2`, etc in the final message, following the order in which they were added.
@@ -176,7 +176,7 @@ info:
   prefix: '&e[&aCMI&e] '
   NoPermission: '[lang]cmi.info.NoPermission[/lang]'
   CantHavePermission: "&cYou can't have this permission!"
-  NoPlayerPermission: '[lang]cmi.info.NoPlayerPermission[args][arg][playerName][/arg][arg][permission][/arg][/args][/lang]'
+  NoPlayerPermission: '[lang]cmi.info.NoPlayerPermission[arg][playerName][/arg][arg][permission][/arg][/lang]'
   Ingame: '&cYou can only use this in game!'
   NoInformation: '&cNo information found!'
 ```
@@ -187,6 +187,6 @@ An [open-source tool](https://triton-generator.rexcantor64.com/) is in the works
 that'll mostly automate these steps.
 There's more information in its [respective guide](../guides/bulk-translate.md).
 
-Already generated translations for some plugins is available in the
+Already generated translations for some plugins are available in the
 [triton-translation-collection](https://github.com/tritonmc/triton-translation-collection)
 GitHub repository.

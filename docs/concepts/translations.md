@@ -13,8 +13,8 @@ So what is a translation?
 A translation in Triton can be either text or a sign group.
 It represents a single message that can be sent in different languages.
 
-If you're using local storage, translations live in the `translations` folder.
-Otherwise, they'll live in the `translations` table/collection in your database.
+If you're using local storage, translations are stored in the `translations` folder.
+Otherwise, they are stored in the `translations` table in your database.
 
 Each translation must be placed inside a collection, which is a group of translations.
 Collections provide a better way to organize translations and to apply settings in bulk.
@@ -33,7 +33,7 @@ rename it or create other collections.
 
 Creating a collection through TWIN is extremely straightforward.
 Simply click on the "Add Collection" button in the sidebar and type the name for the collection.
-Hit "Add" and _bam_, your collection has been created.
+Hit "Add" to finish creating your collection.
 
 </TabItem>
 <TabItem value="json" label="JSON" default>
@@ -47,8 +47,8 @@ Inside the file, you must initiate an empty JSON array:
 []
 ```
 
-Alternatively, if you're using BungeeCord, you can initiate the collection with an
-alternative syntax:
+Alternatively, if you're using a proxy (e.g., BungeeCord or Velocity),
+you can initiate the collection with an alternative syntax:
 
 ```json
 {
@@ -157,7 +157,7 @@ There are hundreds of JSON parsers online, but [here](https://jsonformatter.org/
 You can also use an IDE like [Visual Studio Code](https://code.visualstudio.com)
 :::
 
-If you are not sure how to use the `translations/default.json` file, take a look at these [examples](https://github.com/tritonmc/Triton/tree/v1/examples).
+If you are not sure how to use the `translations/default.json` file, take a look at these [examples](https://github.com/tritonmc/Triton/tree/v4/examples).
 
 </TabItem>
 </Tabs>
@@ -224,8 +224,8 @@ In the future, a button to switch between text and JSON modes will be added, whi
 #### Using Kyori's MiniMessage
 
 :::note[Requirements]
-This feature requires Triton v3.5.1 or newer and PaperMC (or a fork).  
-Understanding of the [MiniMessage Format](https://docs.adventure.kyori.net/minimessage.html#format) is also required.
+This feature requires Triton v3.5.1 or newer.  
+Understanding of the [MiniMessage Format](https://docs.papermc.io/adventure/minimessage/) is also required.
 :::
 
 Kyori's MiniMessage library allows to easily add click and hover actions as well as HEX colors codes (along with legacy colors).
@@ -243,8 +243,9 @@ Example:
 
 #### Using PlaceholderAPI
 
-:::note[Requirements]
+:::warning[Requirements]
 This feature requires Triton v3.7.0 or newer.
+As of Triton v4.0.0, it only works with the [legacy parser](./config.md#message-parser).
 :::
 
 You can simply use any PlaceholderAPI placeholder inside the translation and it will be replaced accordingly.
@@ -386,7 +387,7 @@ _required for `sign`_
 
 Represents which signs are in this **Sign Group**.
 
-If you're using BungeeCord, you must also include a `server` parameter in each location, like this:
+If you're using a proxy, you must also include a `server` parameter in each location, like this:
 
 ```json
 {
@@ -407,7 +408,7 @@ If any of the regex strings in this array matches a message (everywhere except s
 
 ### `servers`
 
-_optional | `text` only | BungeeCord only_  
+_optional | `text` only | proxy only_  
 **Type**: String list  
 **Default**: empty list  
 **Example**: `["lobby-1", "lobby-2", "lobby-3"]`  
@@ -416,7 +417,7 @@ Otherwise, this represents the servers where this item is **not** available.
 
 ### blacklist
 
-_optional | `text` only | BungeeCord only_  
+_optional | `text` only | proxy only_  
 **Type**: Boolean (true or false)  
 **Default**: `true`  
 If enabled, turns `servers` into a blacklist instead of a whitelist.

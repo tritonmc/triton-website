@@ -9,23 +9,24 @@ This page is a guide on Triton's `config.yml` file.
 ## Introduction
 
 This file is where you can configure how Triton will behave in that server.  
-Triton's default config file has comments all over the place, which do a great
-job at explaining what everything does. However, this page will explain some settings
-in more detail.
+Triton's default config file has comments all over the place,
+which do a great job at explaining what everything does.
+However, this page will explain some settings in more detail.
 
-You can check out the default Triton's [Spigot](https://triton.rexcantor64.com/github_config)
-and [BungeeCord](https://triton.rexcantor64.com/github_config_bungee) `config.yml`
+You can check out Triton's default [Spigot](https://triton.rexcantor64.com/github_config),
+[BungeeCord](https://triton.rexcantor64.com/github_config_bungee),
+and [Velocity](https://triton.rexcantor64.com/github_config_velocity) `config.yml`
 at any time on GitHub.
 
-## Languages Section
+## Languages section
 
 This section allows you to add/remove languages from Triton.  
-And you probably know by now, Triton is fully customizable, which means you can
-create as many languages as you'd like!
+Triton is fully customizable,
+which means you can create as many languages as you'd like!
 
 Each language must have a language ID (the key of the YML section),
-a `flag` and a `display-name`.  
-Both `commands` and `minecraft-code` are optional.
+a `flag`, and a `display-name`.  
+The `commands`, `fallback-languages`, and `minecraft-code` properties are optional.
 
 <details>
 <summary>Example language</summary>
@@ -34,16 +35,16 @@ Both `commands` and `minecraft-code` are optional.
 languages:
   en_GB:
     flag: eapwplpnpmbzbj
-    display-name: '&aEnglish (UK)'
+    display-name: '<green>English (UK)'
 ```
 
 </details>
 
 :::warning
-When using BungeeCord with a non-local storage option (read below),
+When using a proxy (e.g., BungeeCord or Velocity) with a non-local storage option (read below),
 you'll need to make sure this section is _exactly_ the same across all servers.  
 The only exception to this rule is the `commands` field that is ignored on Spigot
-servers when using BungeeCord, regardless of storage options.
+servers when using a proxy, regardless of storage options.
 :::
 
 ### `flag`
@@ -60,7 +61,7 @@ If there is not a corresponding locale, it falls back to the main language.
 You can find the complete list of locales in the
 [Minecraft Wiki](https://minecraft.gamepedia.com/Language).
 
-All the values in the list are **case-insensitive**
+All the values in the list are **case-insensitive**.
 
 <details>
 <summary>Usage example</summary>
@@ -69,7 +70,7 @@ All the values in the list are **case-insensitive**
 languages:
   en_GB:
     flag: eapwplpnpmbzbj
-    display-name: '&aEnglish (UK)'
+    display-name: '<green>English (UK)'
     minecraft-code: [en_GB, en_US, en_AU, en_CA, en_NZ, en_PT, en_UD]
 ```
 
@@ -77,9 +78,8 @@ languages:
 
 ### `display-name`
 
-This is fairly obvious.  
 This is what will show up as the language name in chat and the selection GUI.
-Feel free to use color codes and [Triton placeholders](./placeholders.md) here.
+It supports [MiniMessage styles][minimessage] and [Triton placeholders](./placeholders.md).
 
 ### `fallback-languages`
 
@@ -133,20 +133,20 @@ from the following languages, in order, until that language has the requested tr
 
 ### `commands`
 
-There are 4 types of commands you can execute: `PLAYER`, `SERVER`, `BUNGEE`, `BUNGEE_PLAYER`; with the last two being _(obviously)_ available on BungeeCord only.
+There are 4 types of commands you can execute: `PLAYER`, `SERVER`, `PROXY`, `PROXY_PLAYER`; with the last two being available on a proxy only.
 
 - `PLAYER`: Runs the command as if the player typed it in the chat.
 - `SERVER`: Runs the command from console.
-- `BUNGEE`: Runs the command from the BungeeCord console.
-- `BUNGEE_PLAYER`: Runs the command as if the player typed it in the chat, but on the BungeeCord side.
+- `PROXY`: Runs the command from the proxy console.
+- `PROXY_PLAYER`: Runs the command as if the player typed it in the chat, but on the proxy side.
 
 There are 2 available variables for use: `%player%` and `%uuid%`.
 
 - `%player%`: Player's name
 - `%uuid`: Player's UUID (with dashes)
 
-If you're using BungeeCord, you can also limit commands to certain servers by doing something like:
-`BUNGEE:lobby,lobby-2,lobby-3:alert This will only run on 3 servers!`
+If you're using a proxy, you can also limit commands to certain servers by doing something like:
+`PROXY:lobby,lobby-2,lobby-3:alert This will only run on 3 servers!`
 
 :::warning
 
@@ -168,15 +168,15 @@ Run command as console, using 2 variables:
 SERVER:say %player% (%uuid%) has just changed their language!
 ```
 
-Run command on BungeeCord console, but only if the player is on the `lobby` server:
+Run command on the proxy console, but only if the player is on the `lobby` server:
 
 ```
-BUNGEE:lobby:alert This will only run on lobby!
+PROXY:lobby:alert This will only run on lobby!
 ```
 
 :::tip
 
-_(BungeeCord only)_
+_(proxy only)_
 If a command you're using contains a `:` and you want it to be universal, do something like this:
 `PLAYER::give @a minecraft:dirt`
 
@@ -190,11 +190,11 @@ if no corresponding locale is found.
 This will also be used to get a message
 if you don't have it translated in the player's language yet.
 
-## General Settings
+## General settings
 
 ### `twin-token`
 
-If you're using BungeeCord, you only need to place your TWIN token in the BungeeCord Triton's config.  
+If you're using a proxy, you only need to place your TWIN token in the Triton's config on the proxy.  
 To learn more about TWIN and how you can get the token, visit the [TWIN documentation page](./twin.md).
 
 ### `open-selector-command-override`
@@ -213,9 +213,9 @@ Since this is Spigot only, this can be set on a per-server basis.
 ### `run-language-commands-on-join`
 
 _Default: false_  
-This when is pretty self explanatory.
-When enabled, the commands under the language commands are run when the player joins
-the server as well, instead of only on language change.
+When enabled,
+the commands defined for each language are also run when the player joins the server,
+instead of only on language change.
 
 ### `force-client-locale-on-join`
 
@@ -232,8 +232,12 @@ It is **highly recommended** to leave this disabled for user experience purposes
 _Default: `-1` (disabled)_  
 When this option is enabled, Triton reloads automatically (in this server) every X seconds.
 It is recommended to use a relatively high value here to avoid lag.  
-With Triton v3's database storage for translations, I can't see where this could be used,
-but it's still an option for the sake of flexibility.
+
+### `command-aliases`
+
+_Default: `lang`, `language`_  
+The aliases of the `/triton` command to register.
+This is especially useful as a way to customize the command that opens the language selection menu.
 
 ### `log-level`
 
@@ -249,30 +253,60 @@ Available log levels:
 ### `storage`
 
 This section defines where Triton will save/load translation and language preferences.
-At the moment, languages aren't synced automatically yet when a non-local storage option
+At the moment, languages aren't synced automatically when a non-local storage option
 is in use.
 
 A more detailed guide on this section can be found in the
 [storage page](./storage.md).
 
-## Using BungeeCord
+### `message-parser`
 
-To use BungeeCord (or a fork), you must enable `bungeecord` on config. Furthermore, make sure all your servers (including BungeeCord) are using the same version of the plugin, otherwise you may encounter unexpected issues.  
-While using BungeeCord, your `translations` folder is ignored in all servers except the proxy. The `languages` section in the config is also ignored if using local storage.
+_Default: `adventure`_  
+Defines which parser to use when translating messages.
+Two parsers are available:
+- `adventure`, which replaces translations in Adventure components directly; and
+- `legacy`, which converts components to an internal string representation (equivalent to Triton v3 and earlier).
+
+## Experimental settings
+
+### `experimental-async-protocol-lib`
+
+_Default: false_  
+Intercept and parse ProtocolLib packets asynchronously.
+This should improve performance by avoiding blocking the main thread.
+
+See this [experimental feature's page](../experimental-features/async-protocollib.md) for more information.
+
+### `experimental-use-packetevents`
+
+_Default: false_  
+Use PacketEvents instead of ProtocolLib (for Spigot/Paper)
+or native implementation (for BungeeCord and Velocity) for intercepting packets.
+
+See this [experimental feature's page](../experimental-features/packetevents.md) for more information.
+
+## Using a proxy
+
+To use a proxy (such as BungeeCord or Velocity),
+you must enable `behind-proxy` on config.
+Furthermore, make sure all your servers (including the proxy) are using the same version of the plugin,
+otherwise you may encounter unexpected issues.  
+While using a proxy,
+your `translations` folder is ignored in all servers except the proxy.
+The `languages` section in the config is also ignored if using local storage.
 
 Make sure the `storage` settings match on all servers.
 
-## Language Creation
+## Language creation
 
 This section only applies to the current server/proxy, which means you can customize it
 to fit the needs of a specific situation.
 
-If you remember correctly, [Triton's placeholders](./placeholders.md) are composed of three
-tags: `lang`, `args` and `arg`.
+[Triton's placeholders](./placeholders.md) are composed of two tags: `lang` and `arg`.
 In this section, you can change these per context type, giving you huge amounts of flexibility!
 You can also enable/disable certain translation contexts if you aren't using them or they're
 causing issues.  
-Some contexts also have more options, so read the YML comments to get to know them.
+Some contexts also have more options, so read the YAML comments to get to know them.
 
 ### `disabled-line`
 
@@ -316,3 +350,12 @@ When enabled, if a player types a placeholder in the chat, it will be ignored by
 Otherwise, the placeholder will be translated like normal.  
 Keep in mind that placeholders outside the player's message (e.g. in the prefix), will
 still be translated when this is enabled.
+
+### `max-placeholders-in-message`
+
+_Default: `10`_  
+How many placeholders the plugin should try to translate before giving up.
+This prevents infinite loops where the 404 message has a missing placeholder.
+
+
+[minimessage]: https://docs.papermc.io/adventure/minimessage/

@@ -18,7 +18,7 @@ so it's really easy to get started!
 ## Placeholder Syntax
 
 Triton placeholders are composed by the boilerplate tags and its content.  
-Tags such as `[lang]`, `[/lang]`, `[args]`, `[/args]`, `[arg]` and `[/arg]` are considered
+Tags such as `[lang]`, `[/lang]`, `[arg]` and `[/arg]` are considered
 boilerplate because they don't have any meaning when it coming to identifying which
 translation you want.  
 If you want, these tags can be changed in [the config](./config.md#language-creation).
@@ -45,11 +45,10 @@ Because of that, Triton might not be able to detect a placeholder if it has been
 
 ### Advanced placeholders (using variables)
 
-To add the arguments to the placeholder, you need to use two more boilerplate tags: `[args]` and `[arg]`.  
-The first tag, `[args]`, tells the plugin that this placeholder contains variables.  
-The second one, `[arg]`, tells the plugin what are the values of those variables.
+To add the arguments to the placeholder, you need to use another boilerplate tag, `[arg]`,
+which tells the plugin what the values of those variables are.
 
-Example: `[lang]death.kill[args][arg]Player1[/arg][arg]Player2[/arg][/args][/lang]`
+Example: `[lang]death.kill[arg]Player1[/arg][arg]Player2[/arg][/lang]`
 
 All the content between the `[arg]` and `[/arg]` tags will be treated as a variable
 and passed to the translation content.  
@@ -60,7 +59,7 @@ These will be replaced with the content inside the `[arg]` tags, in order
 :::tip
 You can nest placeholders if you want.
 
-Example: `[lang]economy.withdrawal[args][arg]10[/arg][arg][lang]currency.usd[/lang][/arg][/args][/lang]`
+Example: `[lang]economy.withdrawal[arg]10[/arg][arg][lang]currency.usd[/lang][/arg][/lang]`
 :::
 
 When using this inside another plugin, you can place their variables inside the `[arg]` tag:  

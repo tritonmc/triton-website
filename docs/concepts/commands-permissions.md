@@ -12,12 +12,13 @@ Here is a brief summary of the plugin's commands and permissions:
 | /triton, /triton openselector                           | triton.openselector                           |
 | /triton help                                            | triton.help                                   |
 | /triton getflag \<language>                             | triton.getflag                                |
-| /triton reload \[all/server/bungee]                     | triton.reload                                 |
+| /triton reload \[all/server/proxy]                      | triton.reload                                 |
 | /triton setlanguage \<language> \[player]               | triton.setlanguage, triton.setlanguage.others |
 | /triton sign \<set/remove> \<group key (set only)>      | triton.sign                                   |
 | /triton info                                            | triton.info                                   |
 | /triton loglevel \[number]                              | triton.loglevel (console only)                |
 | /triton database \<upload/download>                     | triton.database                               |
+| /triton debug \<server/proxy> \[...args]                | triton.debug                                  |
 | /twin \[upload] \[collection filter] \[language filter] | twin.upload                                   |
 | /twin \<code>                                           | twin.download                                 |
 
@@ -59,11 +60,11 @@ Reloads the plugin.
 
 #### Arguments
 
-`mode` _(bungee in-game only / optional)_: One of the following options:
+`mode` _(proxy in-game only / optional)_: One of the following options:
 
-- `all`/`a`: reloads both Spigot and Bungee
-- `bungee`/`b` _(default)_: reloads only Bungee
-- `server`/`s`: reloads only Spigot
+- `all`/`a`: reloads both Spigot/Paper and the proxy
+- `proxy`/`p` _(default)_: reloads only the proxy
+- `server`/`s`: reloads only Spigot/Paper
 
 When using this command through console, it can only reload the current server/proxy.
 
@@ -120,7 +121,6 @@ we were targeting (e.g. the proxy or the actual server).
 
 ### /triton database \<mode>
 
-_(only available in BungeeCord)_  
 Permission: `triton.database`
 
 If using non-local storage, this command downloads and uploads from the database
@@ -132,6 +132,13 @@ to the `translation` folder for easier editing and migration purposes.
 
 - `upload`/`u`: overwrite all the translations in the database with the ones in the `translations` folder
 - `download`/`d`: overwrite all the translation in the `translations` folder with the ones in the database
+
+### /triton debug \<server/proxy> \[...args]
+
+Permission: `triton.debug`
+
+Set of utilities to debug Triton.
+Use only when requested by the developer.
 
 ### /twin upload \[collection filter] \[language filter]
 
@@ -173,7 +180,7 @@ Default: op
 
 ### triton.reload
 
-Allows access to `/triton reload [all/server/bungee]`.  
+Allows access to `/triton reload [all/server/proxy]`.  
 Default: op
 
 ### triton.setlanguage
@@ -204,6 +211,11 @@ Default: op
 ### triton.database
 
 Allows access to `/triton database <upload/download>`.  
+Default: op
+
+### triton.debug
+
+Allows access to `/triton debug <server/proxy>`.  
 Default: op
 
 ### twin.upload

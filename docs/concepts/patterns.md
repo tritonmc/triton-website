@@ -7,8 +7,9 @@ import TabItem from '@theme/TabItem';
 
 # Patterns
 
-:::note[Requirements]
+:::warning[Requirements]
 Triton v2.0.0 or later is required.
+As of Triton v4.0.0, it only works with the [legacy parser](./config.md#message-parser).
 :::
 
 This feature allows you to translate messages without using placeholders.
@@ -65,8 +66,10 @@ and end (`$`) anchors in your patterns.
 :::
 
 :::danger[Performance Considerations]
-Don't use patterns unless you really have to. Each pattern is checked against every message,
-which can hit your server performance severely. Use Triton placeholders when possible.
+Don't use patterns unless you really have to.
+Each pattern is checked against every message,
+which can hit your server performance severely.
+Use Triton placeholders whenever possible.
 :::
 
 ## Using variables
