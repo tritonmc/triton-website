@@ -14,14 +14,14 @@ Triton is available to download from
 
 Additionally, you might need to download some dependencies if you don't have them already:
 
-- [ProtocolLib 5.4.0+](https://www.spigotmc.org/resources/protocollib.1997/)
+- [ProtocolLib 5.5.0+](https://www.spigotmc.org/resources/protocollib.1997/)
 - [_(Optional)_ PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)
 
 Once you have downloaded the plugin,
-place the `.jar` in the `plugins` folder of all your servers (Spigot/Paper, BungeeCord, Velocity, etc).
+place the `.jar` in the `plugins` folder of all your servers (Spigot/Paper, Folia, BungeeCord, Velocity, etc).
 
 :::warning
-Triton is internally tested on the latest versions of Paper, BungeeCord, and Velocity.
+Triton is internally tested on the latest versions of Paper, Folia, BungeeCord, and Velocity.
 If you are using older versions, or a fork, you might encounter bugs, which you are encouraged to report.
 :::
 

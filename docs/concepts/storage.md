@@ -94,9 +94,9 @@ and all database content on upload.
 This command allows you to copy your database content to a JSON format in the
 `translations` folder.  
 To do this, run `/triton database download` from the proxy console
-(or Spigot/Paper console if you're not running a server network) or in-game.
+(or Spigot/Paper/Folia console if you're not running a server network) or in-game.
 The files will be downloaded to the proxy if you're running a server network.
-Otherwise, they'll be placed in your Spigot/Paper server.
+Otherwise, they'll be placed in your Spigot/Paper/Folia server.
 
 After downloading the content from the database, you can edit as you wish.
 

@@ -62,9 +62,9 @@ Reloads the plugin.
 
 `mode` _(proxy in-game only / optional)_: One of the following options:
 
-- `all`/`a`: reloads both Spigot/Paper and the proxy
+- `all`/`a`: reloads both Spigot/Paper/Folia and the proxy
 - `proxy`/`p` _(default)_: reloads only the proxy
-- `server`/`s`: reloads only Spigot/Paper
+- `server`/`s`: reloads only Spigot/Paper/Folia
 
 When using this command through console, it can only reload the current server/proxy.
 

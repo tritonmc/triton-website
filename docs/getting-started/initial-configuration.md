@@ -9,7 +9,7 @@ sidebar_position: 2
 
 Before proceeding, if you are using a proxy (e.g., BungeeCord or Velocity),
 you **must** enable `behind-proxy` on Triton's `config.yml` for every
-Spigot/Paper server.
+Spigot/Paper/Folia server.
 
 ```yaml
 behind-proxy: true
@@ -136,7 +136,7 @@ twin-token: ''
 ```
 
 :::tip
-If you're using a proxy, you don't need to put the token in any Spigot/Paper server, only on the proxy.
+If you're using a proxy, you don't need to put the token in any Spigot/Paper/Folia server, only on the proxy.
 :::
 
 After getting access to TWIN, follow the [translating your first message guide](../guides/first-translation.md).

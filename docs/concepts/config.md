@@ -280,7 +280,7 @@ See this [experimental feature's page](../experimental-features/async-protocolli
 ### `experimental-use-packetevents`
 
 _Default: false_  
-Use PacketEvents instead of ProtocolLib (for Spigot/Paper)
+Use PacketEvents instead of ProtocolLib (for Spigot/Paper/Folia)
 or native implementation (for BungeeCord and Velocity) for intercepting packets.
 
 See this [experimental feature's page](../experimental-features/packetevents.md) for more information.
