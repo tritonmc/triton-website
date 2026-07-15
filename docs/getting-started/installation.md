@@ -17,6 +17,8 @@ Additionally, you might need to download some dependencies if you don't have the
 - [ProtocolLib 5.5.0+](https://www.spigotmc.org/resources/protocollib.1997/)
 - [_(Optional)_ PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)
 
+Keep in mind that Triton requires Java 21 or newer.
+
 Once you have downloaded the plugin,
 place the `.jar` in the `plugins` folder of all your servers (Spigot/Paper, Folia, BungeeCord, Velocity, etc).
 
