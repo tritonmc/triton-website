@@ -24,7 +24,7 @@ Here are some examples on how to use this integration:
 - **Using Triton Placeholders:** `[lang]some_plugin_message[/lang]`  
   **Using PlaceholderAPI:** `%triton_some_plugin_message%`
 
-- **Using Triton Placeholders:** `[lang]message.with.arguments[args][arg]some argument[/arg][/args][/lang]`  
+- **Using Triton Placeholders:** `[lang]message.with.arguments[arg]some argument[/arg][/lang]`  
   **Using PlaceholderAPI:** _not supported_
 
 ## Using variables

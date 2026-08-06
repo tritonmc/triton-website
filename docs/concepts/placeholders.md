@@ -63,4 +63,4 @@ Example: `[lang]economy.withdrawal[arg]10[/arg][arg][lang]currency.usd[/lang][/a
 :::
 
 When using this inside another plugin, you can place their variables inside the `[arg]` tag:  
-`[lang]example.plugin[args][arg]%player_name%[/arg][/args][/lang]`
+`[lang]example.plugin[arg]%player_name%[/arg][/lang]`
