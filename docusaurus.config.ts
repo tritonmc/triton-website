@@ -67,11 +67,6 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://triton.rexcantor64.com/polymart',
-          label: 'Polymart',
-          position: 'right',
-        },
-        {
           href: 'https://triton.rexcantor64.com/discord',
           label: 'Discord',
           position: 'right',
